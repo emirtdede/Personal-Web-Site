@@ -6,8 +6,6 @@
 [![Formspree](https://img.shields.io/badge/Formspree-E31212?style=for-the-badge&logo=formspree&logoColor=white)](https://formspree.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-![proje_tanıtım_personal_web_site](https://github.com/user-attachments/assets/cd6ef7e1-ee7f-4d48-9a4c-9a3c54de86da)
-
 A modern, highly interactive, and visually stunning personal portfolio website designed to showcase projects, skills, and academic accomplishments. Built using standard web standards (HTML5, Vanilla CSS3, and JavaScript) and tailored with a custom premium dark-rose theme.
 
 🌐 **Live Website**: [emirtdede.com](https://emirtdede.com)
