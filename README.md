@@ -8,7 +8,7 @@
 
 A modern, highly interactive, and visually stunning personal portfolio website designed to showcase projects, skills, and academic accomplishments. Built using standard web standards (HTML5, Vanilla CSS3, and JavaScript) and tailored with a custom premium dark-rose theme.
 
-🌐 **Live Website**: [emirtdede.com](https://emirtdede.com)
+🌐 **Live Website**: [emirtdede.com](https://emirtdede.vercel.app/)
 
 ---
 
