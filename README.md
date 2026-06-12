@@ -69,7 +69,7 @@ Personal-Web-Site/
 ├── css/
 │   └── style.css       # Clean, modern Vanilla CSS styling and animations
 ├── js/
-│   └── script.js      # Dynamic language switcher, form ajax & custom notifications
+│   └── script.js       # Dynamic language switcher, form ajax & custom notifications
 ├── images/
 │   └── home.jpg        # Header background artwork
 ├── index.html          # Core page structure and translation strings
@@ -85,4 +85,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-*Designed and Developed with 💻 and ☕ by [Emir Dede](https://github.com/emirtdede).*
+*Designed and Developed with 💻 by [Emir Dede](https://github.com/emirtdede).*
