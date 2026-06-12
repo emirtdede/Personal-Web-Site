@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,9 @@
     <title>Emir DEDE</title>
 
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom favicon 'e' -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22Poppins, sans-serif%22 fill=%22%23cc9595%22 font-weight=%22bold%22>e</text></svg>">
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,16 +20,41 @@
 
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">emirdede.com <span class="animate" style="--i:1;"></span></a>
+        <a href="#" class="logo">emirtdede.com <span class="animate" style="--i:1;"></span></a>
 
         <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active">
+                <span class="lang-tr">Ana Sayfa</span>
+                <span class="lang-en">Home</span>
+            </a>
+            <a href="#about">
+                <span class="lang-tr">Hakkımda</span>
+                <span class="lang-en">About</span>
+            </a>
+            <a href="#education">
+                <span class="lang-tr">Yolculuk</span>
+                <span class="lang-en">Journey</span>
+            </a>
+            <a href="#skills">
+                <span class="lang-tr">Yetenekler</span>
+                <span class="lang-en">Skills</span>
+            </a>
+            <a href="#projects">
+                <span class="lang-tr">Projeler</span>
+                <span class="lang-en">Projects</span>
+            </a>
+            <a href="#contact">
+                <span class="lang-tr">İletişim</span>
+                <span class="lang-en">Contact</span>
+            </a>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher-container">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
 
             <span class="active-nav"></span>
             <span class="animate" style="--i:2;"></span>
@@ -36,53 +64,106 @@
     <!-- home section design -->
     <section class="home show-animate" id="home">
         <div class="home-content">
-            <h1>Hi, I'm <span>Emir DEDE</span><span class="animate" style="--i:2;"></span></h1>
+            <h1>
+                <span class="lang-tr">Merhaba,<br>ben <span>Emir DEDE</span></span>
+                <span class="lang-en">Hi, I'm <span>Emir DEDE</span></span>
+                <span class="animate" style="--i:2;"></span>
+            </h1>
             <div class="text-animate">
-                <h3>Computer Engineer</h3>
+                <h3 class="lang-tr">BT Çözüm Uzmanı</h3>
+                <h3 class="lang-en">IT Solution Specialist</h3>
                 <span class="animate" style="--i:3;"></span>
             </div>
-            <p>Why don't programmers like nature? It has too many bugs!
-                <br>1101100 1101111 1101100
+            <p>
+                <span class="lang-tr">Yazılımcılar neden doğayı sevmez? Çünkü çok fazla böcek (bug) var!<br>1101100 1101111 1101100</span>
+                <span class="lang-en">Why don't programmers like nature? It has too many bugs!<br>1101100 1101111 1101100</span>
                 <span class="animate" style="--i:4;"></span>
             </p>
 
             <div class="btn-box">
-                <a href="https://www.upwork.com/freelancers/~010aef7f7b7551e6a5" class="btn">Hire Me</a>
-                <a href="#contact" class="btn">Let's Talk</a>
+                <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" class="btn">
+                    <span class="lang-tr">Beni İşe Al</span>
+                    <span class="lang-en">Hire Me</span>
+                </a>
+                <a href="#contact" class="btn">
+                    <span class="lang-tr">Konuşalım</span>
+                    <span class="lang-en">Let's Talk</span>
+                </a>
                 <span class="animate" style="--i:5;"></span>
             </div>
         </div>
 
         <div class="home-sci">
-            <a href="https://www.linkedin.com/in/emirtdede/"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/emirtdede"><i class='bx bxl-github' ></i></a>
-            <a href="https://www.twitch.tv/Mexonom"><i class='bx bxl-twitch' ></i></a>
-            <a href="https://instagram.com/emirtdede"><i class='bx bxl-instagram' ></i></a>
+            <a href="https://www.linkedin.com/in/emirtdede/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/emirtdede" target="_blank"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.twitch.tv/Mexonom" target="_blank"><i class='bx bxl-twitch' ></i></a>
+            <a href="https://instagram.com/emirtdede" target="_blank"><i class='bx bxl-instagram' ></i></a>
             <span class="animate" style="--i:6;"></span>
         </div>
 
-        <div class="home-imgHover"></div>
         <span class="animate home-img" style="--i:7;"></span>
     </section>
 
     <!-- about section design -->
     <section class="about" id="about">
-        <h2 class="heading">About <span>ME</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">
+            <span class="lang-tr">Hakkımda</span>
+            <span class="lang-en">About <span>ME</span></span>
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
         
         <div class="about-img">
-            <img src="images/about.jpg" alt="">
+            <img src="images/about.jpg" alt="Emir Dede">
             <span class="circle-spin"></span>
             <span class="animate scroll" style="--i:2;"></span>
         </div>
 
         <div class="about-content">
-            <h3>Engineer, Developer, Entrepreneur, Lifelong Learner<span class="animate scroll" style="--i:3;"></span></h3>
-            <p> 
-                Hello, I am a 3rd-year computer engineering student with a passion for technology and a drive to innovate. I am determined to use my knowledge and skills in computer science to develop new solutions and offer innovative approaches to existing problems. With my analytical thinking and problem-solving abilities, I focus on finding effective solutions to complex issues. Through collaboration and communication skills, I aim to work with teams from diverse disciplines to produce pioneering projects in the field of technology. As a student who is open to continuous learning and self-improvement, I am excited to contribute to my career in computer engineering.
-                <span class="animate scroll" style="--i:4;"></span></p>
+            <h3>
+                <span class="lang-tr">BT Çözüm ve Entegrasyon Uzmanı</span>
+                <span class="lang-en">IT Solution & Integration Specialist</span>
+                <span class="animate scroll" style="--i:3;"></span>
+            </h3>
             
-            <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
+            <p> 
+                <span class="lang-tr">Hastane altyapıları içerisinde klinik izleme ve tanı sistemlerinin entegrasyonu konusunda deneyimli Sağlık Bilişimi ve Medikal Cihaz Entegrasyon Uzmanı. Hasta başı monitörler ve tanı cihazları (ECG, EEG, EMG, AED, Defibrilatör) ile hastane platformları (HIS, ICU CIS, PACS, VNA) arasında birlikte çalışabilirlik standartları kullanarak sistem entegrasyonları gerçekleştirme konusunda uzman. Klinik veri akışının sürekliliğini sağlamak amacıyla mikroservis tabanlı ara katman çözümleri geliştirme, veritabanı bağlantılarını yönetme ve sağlık sistemleri arasında güvenilir veri iletişimini sağlama konularında deneyim sahibidir.</span>
+                <span class="lang-en">Healthcare IT & Medical Device Integration Specialist experienced in integrating clinical monitoring and diagnostic systems within hospital infrastructures. Skilled in connecting bedside monitors and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with hospital platforms such as HIS, ICU CIS, PACS, and VNA using interoperability standards and integration solutions. Experienced in designing microservice-based middleware, managing database connectivity, and maintaining reliable clinical data flow across healthcare systems.</span>
+                <span class="animate scroll" style="--i:4;"></span>
+            </p>
+
+            <!-- Additional Details Grid -->
+            <div class="about-info-list">
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Doğum Tarihi:</strong><br>14 Temmuz 2001 (Yaş: <span class="calculated-age">24</span>)</span>
+                    <span class="lang-en"><strong>Date of Birth:</strong><br>14 July 2001 (Age: <span class="calculated-age">24</span>)</span>
+                </div>
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Diller:</strong><br>Türkçe (Ana dil), İngilizce (B2)</span>
+                    <span class="lang-en"><strong>Languages:</strong><br>Turkish (Native), English (B2)</span>
+                </div>
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Lokasyon:</strong><br>Ümraniye, İstanbul, TR</span>
+                    <span class="lang-en"><strong>Location:</strong><br>Umraniye, Istanbul, TR</span>
+                </div>
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Sürücü Belgesi:</strong><br>B Sınıfı - Aktif</span>
+                    <span class="lang-en"><strong>Driving License:</strong><br>Category B - Active</span>
+                </div>
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Askerlik Durumu:</strong><br>Tecilli (2027)</span>
+                    <span class="lang-en"><strong>Military Service:</strong><br>Postponed (2027)</span>
+                </div>
+                <div class="about-info-item">
+                    <span class="lang-tr"><strong>Başlama Durumu:</strong><br>Derhal başlayabilir</span>
+                    <span class="lang-en"><strong>Availability:</strong><br>Immediately available</span>
+                </div>
+            </div>
+            
+            <div class="btn-box btns" style="margin-top: 3rem;">
+                <a href="#contact" class="btn">
+                    <span class="lang-tr">İletişime Geç</span>
+                    <span class="lang-en">Get in Touch</span>
+                </a>
                 <span class="animate scroll" style="--i:5;"></span>
             </div>
         </div>
@@ -90,42 +171,65 @@
 
     <!-- education section design -->
     <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">
+            <span class="lang-tr">Yolculuğum</span>
+            <span class="lang-en">My <span>Journey</span></span>
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
+        
         <div class="education-row">
             <div class="education-column">
-                <h3 class="title">Education<span class="animate scroll" style="--i:2;"></span></h3>
+                <h3 class="title">
+                    <span class="lang-tr">Eğitim ve Sertifikalar</span>
+                    <span class="lang-en">Education & Certs</span>
+                    <span class="animate scroll" style="--i:2;"></span>
+                </h3>
 
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2021-2025</div>
-                            <h3>Bachelor Degree - Korkut Ata University</h3>
-                            <p>Computer Engineering</p>
+                            <div class="year"><i class='bx bxs-calendar'></i> 2021 - 2025</div>
+                            <h3 class="lang-tr">Bilgisayar Mühendisliği Lisans - Korkut Ata Üniversitesi</h3>
+                            <h3 class="lang-en">Bachelor of Computer Engineering - Korkut Ata University</h3>
+                            <p class="lang-tr">GPA: 2.91/4.00<br>Yazılım mühendisliği, veri bilimi ve yapay zekâ temelleri üzerine odaklanma.</p>
+                            <p class="lang-en">GPA: 2.91/4.00<br>Core focus on software engineering, data science, and AI fundamentals.</p>
                         </div>
                     </div>
 
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2023</div>
-                            <h3>Certificates</h3>
-                            <p>KOSGEB - Traditional Entrepreneurship Training
-                                <br>KOSGEB - Advanced Entrepreneurship Training
+                            <div class="year"><i class='bx bxs-calendar'></i> 2024</div>
+                            <h3 class="lang-tr">Yazılım ve Altyapı Sertifikaları</h3>
+                            <h3 class="lang-en">Software & Infrastructure Certs</h3>
+                            <p class="lang-tr">
+                                • İleri Seviye Python Programlama<br>
+                                • Versiyon Kontrol Sistemleri: Git & GitHub<br>
+                                • Güvenli Yazılım Geliştirme<br>
+                                • AWS ile Bulut Bilişim
+                            </p>
+                            <p class="lang-en">
+                                • Advanced Python Programming<br>
+                                • Version Control Systems: Git & GitHub<br>
+                                • Secure Software Development<br>
+                                • Cloud Computing with AWS
                             </p>
                         </div>
                     </div>
 
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2024</div>
-                            <h3>Certificates</h3>
-                            <p>Advanced Python Programming
-                                <br>Version Controls: Git and GitHub
-                                <br>Secure Software Development
-                                <br>Cloud Computing with Amazon Web Services (AWS)
-                                <br>Effective Communication Strategies
-                                <br>Building and Managing a Team
-                                <br>Financial Literacy
-                                <br>...
+                            <div class="year"><i class='bx bxs-calendar'></i> 2023</div>
+                            <h3 class="lang-tr">Girişimcilik ve İletişim Sertifikaları</h3>
+                            <h3 class="lang-en">Entrepreneurship & Soft Skills Certs</h3>
+                            <p class="lang-tr">
+                                • KOSGEB Geleneksel ve İleri Girişimcilik Eğitimi<br>
+                                • Etkili İletişim Stratejileri<br>
+                                • Takım Kurma ve Yönetimi
+                            </p>
+                            <p class="lang-en">
+                                • KOSGEB Traditional & Advanced Entrepreneurship<br>
+                                • Effective Communication Strategies<br>
+                                • Building and Managing a Team
                             </p>
                         </div>
                     </div>
@@ -135,34 +239,58 @@
             </div>
 
             <div class="education-column">
-                <h3 class="title">Projects<span class="animate scroll" style="--i:5;"></span></h3>
+                <h3 class="title">
+                    <span class="lang-tr">İş Deneyimi</span>
+                    <span class="lang-en">Work Experience</span>
+                    <span class="animate scroll" style="--i:5;"></span>
+                </h3>
 
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2022</div>
-                            <h3>Bicycle Rental System</h3>
-                            <p>Creating the application algorithm and writing back-end codes for a bicycle rental company using the Python programming language and taking advantage of the functionality of object-oriented programming.
-                            </p>
+                            <div class="year"><i class='bx bxs-calendar'></i> 07/2025 - 03/2026</div>
+                            <h3 class="lang-tr">Medipro İç ve Dış Tic. Ltd. Şti.</h3>
+                            <h3 class="lang-en">Medipro Co. Ltd.</h3>
+                            <h4 class="lang-tr" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">BT Çözüm ve Entegrasyon Uzmanı</h4>
+                            <h4 class="lang-en" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">IT Solution & Integration Specialist</h4>
+                            <p class="lang-tr">Türkiye genelinde 100’den fazla hastanede 1000’den fazla medikal cihazın uçtan uca entegrasyonunu gerçekleştirdim (HBYS/HIS, PACS, VNA).</p>
+                            <p class="lang-en">Delivered end-to-end integration of 1000+ medical devices across 100+ hospitals in Türkiye, connecting clinical systems with HIS, PACS, and VNA.</p>
                         </div>
                     </div>
 
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2023</div>
-                            <h3>Personal Web site</h3>
-                            <p>Designing my own personal website using HTML, CSS, JavaScript, Bootstrap technologies.
-                            </p>
+                            <div class="year"><i class='bx bxs-calendar'></i> 07/2025 - 09/2025</div>
+                            <h3 class="lang-tr">TRtek MEDICAL SOFTWARE</h3>
+                            <h3 class="lang-en">TRtek MEDICAL SOFTWARE</h3>
+                            <h4 class="lang-tr" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">Yazılım ve Sistem Stajyeri</h4>
+                            <h4 class="lang-en" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">Software & Systems Intern</h4>
+                            <p class="lang-tr">C# ve ASP.NET Core MVC kullanarak modüler uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanları geliştirdim.</p>
+                            <p class="lang-en">Developed modular application components using C# and ASP .NET Core MVC, and designed relational databases using SQL Server.</p>
                         </div>
                     </div>
 
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2023</div>
-                            <h3>Student Information System (SIS)</h3>
-                            <p>
-                                It is a comprehensive software system used to manage critical data such as student management, registrations, academic information, course schedules, grades and exam results in universities and educational institutions using HTML, CSS, JavaScript, Bootstrap, ASP.NET, Oracle SQL, MVC technologies.
-                            </p>
+                            <div class="year"><i class='bx bxs-calendar'></i> 03/2025 - 06/2025</div>
+                            <h3 class="lang-tr">Osmaniye Korkut Ata Üniversitesi</h3>
+                            <h3 class="lang-en">Osmaniye Korkut Ata University</h3>
+                            <h4 class="lang-tr" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">BT Stajyeri (Bilgi İşlem Daire Bşk.)</h4>
+                            <h4 class="lang-en" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">IT Intern (IT Department)</h4>
+                            <p class="lang-tr">Donanım/yazılım bakım işlemleri, ağ altyapısının kurulumu ve son kullanıcı destek süreçlerinde görev aldım.</p>
+                            <p class="lang-en">Supported routine IT tasks, hardware/software maintenance, network setup, and user support helpdesk.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 03/2023 - 10/2023</div>
+                            <h3 class="lang-tr">Çukurova Üniversitesi & TÜBİTAK</h3>
+                            <h3 class="lang-en">Cukurova University & TUBITAK</h3>
+                            <h4 class="lang-tr" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">Araştırma Stajyeri</h4>
+                            <h4 class="lang-en" style="color: var(--main-color); font-size: 1.6rem; margin-top: 0.5rem;">Research Intern</h4>
+                            <p class="lang-tr"> Horseshoe Adası araştırma projesinde jeokronolojik verilerin işlenmesi, analizi ve veri görselleştirme süreçlerinde görev aldım.</p>
+                            <p class="lang-en">Assisted in processing geochronological data, evaluation of dating results, and data visualization in a TUBITAK-supported research project.</p>
                         </div>
                     </div>
 
@@ -174,32 +302,40 @@
 
     <!-- skills section design -->
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills<span class="animate scroll" style="--i:1;"></span></span></h2>
+        <h2 class="heading">
+            <span class="lang-tr">Yeteneklerim</span>
+            <span class="lang-en">My <span>Skills</span></span>
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
     
         <div class="skills-row">
             <div class="skills-column">
-                <h3 class="title">Coding Skills<span class="animate scroll" style="--i:2;"></span></h3>
+                <h3 class="title">
+                    <span class="lang-tr">Teknik Yetenekler</span>
+                    <span class="lang-en">Technical Skills</span>
+                    <span class="animate scroll" style="--i:2;"></span>
+                </h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML-CSS-Bootstrap<span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Medikal Cihaz ve Entegrasyon (HL7, DICOM, PACS, VNA)</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Medical Device & Integration (HL7, DICOM, PACS, VNA)</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>JavaScript-React-React Native <span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Programlama ve Otomasyon (Python, C#, ASP.NET Core)</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Programming & Automation (Python, C#, ASP.NET Core)</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>ASP.NET MVC<span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Veritabanı Yönetimi (SQL, NoSQL, EF Core)</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Database Management (SQL, NoSQL, EF Core)</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>C, C++, Python, Oracle Database<span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Sanallaştırma, Ağ ve Altyapı (VMware, Hyper-V, VPN)</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Virtualization, Networks & Infra (VMware, Hyper-V, VPN)</h3>
                         </div>
                     </div>
 
@@ -208,28 +344,32 @@
             </div>
 
             <div class="skills-column">
-                <h3 class="title">Professional Skills<span class="animate scroll" style="--i:5;"></span></h3>
+                <h3 class="title">
+                    <span class="lang-tr">Kişisel Yetkinlikler</span>
+                    <span class="lang-en">Soft Skills</span>
+                    <span class="animate scroll" style="--i:5;"></span>
+                </h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
-                        <div class="progress">
-                            <h3>UX/IX <span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Analitik Problem Çözme</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Analytical Problem Solving</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>Web Development <span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Uçtan Uca Proje Sahipliği</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> End-to-End Project Ownership</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>Mobile Application Development <span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Fonksiyonlar Arası İletişim (Klinik ve Teknik Ekipler)</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Cross-Functional Communication (Clinical & Technical)</h3>
                         </div>
 
-                        <div class="progress">
-                            <h3>Desktop Application Development <span></span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="skill-item">
+                            <h3 class="lang-tr"><i class='bx bx-check-double'></i> Zaman Yönetimi ve Sürekli Öğrenme</h3>
+                            <h3 class="lang-en"><i class='bx bx-check-double'></i> Time Management & Continuous Learning</h3>
                         </div>
                     </div>
 
@@ -239,18 +379,266 @@
         </div>
     </section>
 
+    <!-- projects section design -->
+    <section class="projects" id="projects">
+        <h2 class="heading">
+            <span class="lang-tr">Akademik Projeler</span>
+            <span class="lang-en">Academic <span>Projects</span></span>
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
+
+        <div class="projects-row">
+            <!-- Project 1: EEG/EMG Integration Microservice -->
+            <div class="project-card">
+                <h3 class="lang-tr">EEG/EMG Veri Entegrasyonu Mikroservisi</h3>
+                <h3 class="lang-en">EEG/EMG Data Integration Microservice</h3>
+                <p class="lang-tr">Python tabanlı bir entegrasyon mikroservisi geliştirerek EEG ve EMG cihaz çıktılarının DICOM formatına dönüştürülmesini sağladım ve HIS/PACS sistemleri ile entegrasyonunu gerçekleştirdim.</p>
+                <p class="lang-en">A Python-based integration microservice that processes EEG and EMG device outputs, converts them into DICOM format, and enables association with HIS/PACS systems.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">DICOM</span>
+                    <span class="tag">HL7</span>
+                    <span class="tag">PACS/HIS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2: Perde Dünyası -->
+            <div class="project-card">
+                <h3 class="lang-tr">Perde Dünyası</h3>
+                <h3 class="lang-en">Perde Dünyası</h3>
+                <p class="lang-tr">Next.js (App Router) ve Supabase tabanlı, WhatsApp teklif entegrasyonu, etkileşimli ürün kataloğu, gelişmiş resim galerisi ve ziyaretçi analiz paneli sunan modern vitrin platformu.</p>
+                <p class="lang-en">A modern Next.js (App Router) & Supabase-based WhatsApp offer showcase with an interactive product catalog, advanced image gallery, and visitor analytics admin panel.</p>
+                <div class="project-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Web App</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://emirtdede.com" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3: Social Crisis Simulation Platform -->
+            <div class="project-card">
+                <h3 class="lang-tr">Toplumsal Kriz Simülasyon Platformu</h3>
+                <h3 class="lang-en">Social Crisis Simulation Platform</h3>
+                <p class="lang-tr">Afet, pandemi, savaş ve ekonomik kriz gibi senaryolarda karar verme süreçlerini geliştirmeyi amaçlayan, TÜBİTAK 2209-A destekli mobil simülasyon platformu.</p>
+                <p class="lang-en">An interactive mobile simulation platform designed to improve decision-making in disaster, pandemic, war, and economic crises. Funded by TÜBİTAK 2209-A.</p>
+                <div class="project-tags">
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">TÜBİTAK 2209-A</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.figma.com/@emirtdede" target="_blank" title="Figma Demo"><i class='bx bxl-figma'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 4: Power Pilot -->
+            <div class="project-card">
+                <h3 class="lang-tr">Power Pilot</h3>
+                <h3 class="lang-en">Power Pilot</h3>
+                <p class="lang-tr">Bilgisayarların otomatik kapanma, yeniden başlatma, uyku ve hazırda bekletme modlarını otomatikleştiren, çok dilli destek sunan modern ve hafif Electron masaüstü uygulaması.</p>
+                <p class="lang-en">A modern, lightweight Electron-based power management application that automates PC shutdown, restart, sleep, and hibernation with multi-language support.</p>
+                <div class="project-tags">
+                    <span class="tag">Electron</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Desktop App</span>
+                    <span class="tag">HTML/CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 5: Notitia News Application -->
+            <div class="project-card">
+                <h3 class="lang-tr">Notitia Haber Uygulaması</h3>
+                <h3 class="lang-en">Notitia News Application</h3>
+                <p class="lang-tr">React Native kullanılarak mobil platformlar için geliştirilen, Firebase gerçek zamanlı veritabanı altyapısıyla desteklenen mobil haber akışı uygulaması.</p>
+                <p class="lang-en">A mobile news application developed for Android and iOS using React Native and powered by Firebase real-time database.</p>
+                <div class="project-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Mobile App</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 6: Student Information System -->
+            <div class="project-card">
+                <h3 class="lang-tr">Öğrenci Bilgi Sistemi (SIS)</h3>
+                <h3 class="lang-en">Student Information System (SIS)</h3>
+                <p class="lang-tr">Öğrencilerin akademik süreçlerini, kayıtlarını, ders programlarını ve notlarını yönetmek amacıyla HTML, CSS, JS, ASP.NET, Oracle SQL ve MVC mimarisiyle geliştirilen web uygulaması.</p>
+                <p class="lang-en">A student management web application developed using HTML, CSS, JavaScript, Bootstrap, ASP.NET, Oracle SQL, and MVC technologies for educational institutions.</p>
+                <div class="project-tags">
+                    <span class="tag">ASP.NET MVC</span>
+                    <span class="tag">Oracle SQL</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">SIS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 7: Medipro Nihon Kohden AED Site -->
+            <div class="project-card">
+                <h3 class="lang-tr">Medipro Nihon Kohden AED Site</h3>
+                <h3 class="lang-en">Medipro Nihon Kohden AED Site</h3>
+                <p class="lang-tr">Dinamik bir yönetim paneli altyapısıyla geliştirilmiş, teknik bilgisi olmayan yöneticilerin tüm web sitesi içeriğini kolayca güncelleyebilmesini sağlayan kurumsal tanıtım platformu.</p>
+                <p class="lang-en">A platform built with a fully dynamic architecture supported by a custom admin panel, allowing non-technical administrators to manage and update all website content.</p>
+                <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Admin Panel</span>
+                    <span class="tag">Web App</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 8: Medipro Electronic Signature -->
+            <div class="project-card">
+                <h3 class="lang-tr">Medipro Elektronik İmza</h3>
+                <h3 class="lang-en">Medipro Electronic Signature</h3>
+                <p class="lang-tr">Klinik evrak ve hekim raporlama sistemleri için entegre edilmiş, güvenli, yasal mevzuatlara uygun ve doğrulanabilir e-imza entegrasyonu bileşeni.</p>
+                <p class="lang-en">An integrated, secure, and legally compliant electronic signature module designed for clinical document approvals and physician reporting systems.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">E-Signature</span>
+                    <span class="tag">Security</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 9: Electronic Daybook Ledger -->
+            <div class="project-card">
+                <h3 class="lang-tr">Elektronik Yevmiye Defteri</h3>
+                <h3 class="lang-en">Electronic Daybook Ledger</h3>
+                <p class="lang-tr">Elektronik yevmiye defterlerinin resmi standartlara uygun olarak dijital ortamda tutulmasını, doğrulanmasını ve arşivlenmesini sağlayan finans/muhasebe yazılımı.</p>
+                <p class="lang-en">A business financial application designed to securely maintain, validate, and digitally archive official electronic transaction daybooks and general ledgers.</p>
+                <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Financial IT</span>
+                    <span class="tag">Data Security</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 10: Basic OS -->
+            <div class="project-card">
+                <h3 class="lang-tr">Temel İşletim Sistemi (Basic OS)</h3>
+                <h3 class="lang-en">Basic Operating System</h3>
+                <p class="lang-tr">Assembly programlama diliyle yazılmış, 6 temel komut satırı komutunu destekleyen, bilgisayar mimarisi ve donanım etkileşimlerini simüle eden mikro işletim sistemi.</p>
+                <p class="lang-en">A low-level operating system kernel featuring 6 built-in command line commands, written entirely in Assembly language to demonstrate low-level computer architecture.</p>
+                <div class="project-tags">
+                    <span class="tag">Assembly</span>
+                    <span class="tag">OS Kernel</span>
+                    <span class="tag">Low-Level</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 11: ML Classification Pipeline -->
+            <div class="project-card">
+                <h3 class="lang-tr">Makine Öğrenmesi Sınıflandırma Pipeline'ı</h3>
+                <h3 class="lang-en">ML Classification Pipeline</h3>
+                <p class="lang-tr">Metin sınıflandırma görevleri için model eğitimi, değerlendirmesi ve en iyi model seçimini gerçekleştiren makine öğrenmesi pipeline'ı.</p>
+                <p class="lang-en">A Python-based machine learning pipeline for training, evaluating, and selecting optimal models for text classification tasks.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Scikit-Learn</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 12: Sentiment Analysis Preprocessing -->
+            <div class="project-card">
+                <h3 class="lang-tr">Duygu Analizi Ön İşleme Pipeline'ı</h3>
+                <h3 class="lang-en">Sentiment Analysis Preprocessing</h3>
+                <p class="lang-tr">Çok dilli metin verilerini duygu analizi ve sınıflandırma görevleri için hazırlayan Python tabanlı bir veri işleme pipeline’ı geliştirdim.</p>
+                <p class="lang-en">A Python-based preprocessing pipeline that prepares multilingual text data for sentiment analysis and classification tasks.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Data Preprocessing</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 13: AA News Crawler -->
+            <div class="project-card">
+                <h3 class="lang-tr">AA Haber Crawler – Veri Madenciliği</h3>
+                <h3 class="lang-en">AA News Crawler – Data Mining</h3>
+                <p class="lang-tr">Anadolu Ajansı gibi haber kaynaklarından yapılandırılmış veri çekmek amacıyla Python tabanlı verimli ve hata toleranslı bir web crawler geliştirdim.</p>
+                <p class="lang-en">A Python-based web crawler designed for structured data extraction from online news sources (e.g., Anadolu Ajansı), focused on efficiency and fault-tolerance.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Web Scraping</span>
+                    <span class="tag">Data Mining</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 14: Dental Health Tracking App -->
+            <div class="project-card">
+                <h3 class="lang-tr">Ağız ve Diş Sağlığı Takip Uygulaması</h3>
+                <h3 class="lang-en">Dental Health Tracking App</h3>
+                <p class="lang-tr">ASP.NET Core MVC kullanılarak geliştirilen ağız ve diş sağlığı izleme ve randevu takip uygulaması.</p>
+                <p class="lang-en">Oral and dental health monitoring and appointment tracking application developed with ASP .NET Core MVC.</p>
+                <div class="project-tags">
+                    <span class="tag">ASP.NET Core</span>
+                    <span class="tag">MVC</span>
+                    <span class="tag">SQL Server</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- contact section design -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>ME!</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">
+            <span class="lang-tr">İletişime <span>Geç!</span></span>
+            <span class="lang-en">Contact <span>ME!</span></span>
+            <span class="animate scroll" style="--i:1;"></span>
+        </h2>
         
-        <form action="#">
+        <form action="https://formspree.io/f/xvznwqeb" method="POST">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" id="form-name" name="name" placeholder="Full Name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="email" id="form-email" name="email" placeholder="Email Address" required>
                     <span class="focus"></span>
                 </div>
 
@@ -259,11 +647,11 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="number" id="form-phone" name="phone" placeholder="Mobile Number" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="text" id="form-subject" name="subject" placeholder="Email Subject" required>
                     <span class="focus"></span>
                 </div>
 
@@ -271,13 +659,30 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="form-message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
                 <span class="animate scroll" style="--i:5;"></span>
             </div>
 
+            <div class="file-upload-field">
+                <label for="form-file" class="file-upload-label">
+                    <i class='bx bx-cloud-upload'></i>
+                    <span class="lang-tr" id="file-label-text-tr">Dosya Ekle (İsteğe Bağlı)</span>
+                    <span class="lang-en" id="file-label-text-en">Attach File (Optional)</span>
+                </label>
+                <input type="file" id="form-file" name="attachment" style="display: none;">
+                <div id="file-upload-info" class="file-upload-info" style="display: none;">
+                    <span id="file-name"></span>
+                    <button type="button" id="remove-file-btn"><i class='bx bx-trash'></i></button>
+                </div>
+                <span class="animate scroll" style="--i:5.5;"></span>
+            </div>
+
             <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="btn">
+                    <span class="lang-tr">Gönder</span>
+                    <span class="lang-en">Submit</span>
+                </button>
                 <span class="animate scroll" style="--i:6;"></span>
             </div>
         </form>
@@ -286,7 +691,7 @@
     <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by Emir Dede | All Rights Reserved.</p>
+            <p>Copyright &copy; <span id="current-year">2026</span> by Emir Dede | All Rights Reserved.</p>
         
             <span class="animate scroll" style="--i:1;"></span>
         </div>
@@ -298,6 +703,25 @@
         </div>
     </footer>
 
+
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert" class="custom-alert-overlay">
+        <div class="custom-alert-box" id="custom-alert-box">
+            <div class="custom-alert-icon">
+                <i class='bx bx-check-circle' id="alert-icon-success"></i>
+                <i class='bx bx-x-circle' id="alert-icon-error" style="display: none;"></i>
+            </div>
+            <h3 id="custom-alert-title">
+                <span class="lang-tr" id="alert-title-tr">Başarılı!</span>
+                <span class="lang-en" id="alert-title-en">Success!</span>
+            </h3>
+            <p id="custom-alert-message">Mesajınız başarıyla gönderildi!</p>
+            <button id="custom-alert-btn" class="alert-btn">
+                <span class="lang-tr">Tamam</span>
+                <span class="lang-en">OK</span>
+            </button>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
