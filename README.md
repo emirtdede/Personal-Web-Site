@@ -23,7 +23,7 @@
 
 A modern, highly interactive, and visually polished personal portfolio website designed to showcase software development projects, technical skills, and academic accomplishments. Tailored with a custom premium dark-rose theme and optimized for fast client-side performance.
 
-🌐 **Live Demo**: [emirtdede.com](https://emirtdede.com)
+🌐 **Live Demo**: [emirtdede.com](https://emirtdede.vercel.app)
 
 ---
 
@@ -88,7 +88,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 Yazılım projelerini, teknik yetkinlikleri ve akademik çalışmaları sergilemek üzere tasarlanmış, modern ve etkileşimli bir kişisel portföy web sitesidir. Özel koyu-gül (dark-rose) tasarım teması ile şekillendirilmiş olup, tarayıcı tarafında yüksek performansla çalışacak şekilde optimize edilmiştir.
 
-🌐 **Canlı Demo**: [emirtdede.com](https://emirtdede.com)
+🌐 **Canlı Demo**: [emirtdede.com](https://emirtdede.vercel.app)
 
 ---
 
