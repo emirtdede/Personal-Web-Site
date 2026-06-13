@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emir DEDE</title>
+    <title>emirtdede</title>
 
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Custom favicon 'e' -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22Poppins, sans-serif%22 fill=%22%23cc9595%22 font-weight=%22bold%22>e</text></svg>">
+    <!-- Custom favicon -->
+    <link rel="icon" href="icon.png" type="image/png">
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -52,8 +52,7 @@
 
             <!-- Language Switcher -->
             <div class="lang-switcher-container">
-                <button class="lang-btn active" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
+                <i class='bx bx-world lang-toggle' id="lang-toggle" title="TR / EN"></i>
             </div>
 
             <span class="active-nav"></span>
@@ -399,18 +398,54 @@
                     <span class="tag">DICOM</span>
                     <span class="tag">HL7</span>
                     <span class="tag">PACS/HIS</span>
+                    <span class="tag">Microservice</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 2: Perde Dünyası -->
+            <!-- Project 2: Social Crisis Simulation Platform -->
+            <div class="project-card">
+                <h3 class="lang-tr">Toplumsal Kriz Simülasyon Platformu</h3>
+                <h3 class="lang-en">Social Crisis Simulation Platform</h3>
+                <p class="lang-tr">Afet, pandemi, savaş ve ekonomik kriz gibi senaryolarda karar verme süreçlerini geliştirmeyi amaçlayan, yapay zekâ destekli, TÜBİTAK 2209-A destekli ve Figma tasarımlı mobil simülasyon platformu.</p>
+                <p class="lang-en">An interactive, mobile-based, machine learning-supported simulation application designed to improve decision-making under disaster, pandemic, war, and economic crisis scenarios. Funded by TÜBİTAK 2209-A.</p>
+                <div class="project-tags">
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">TÜBİTAK 2209-A</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Social-Crisis-Simulation-Platform" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.figma.com/@emirtdede" target="_blank" title="Figma Demo"><i class='bx bxl-figma'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3: Notitia News Application -->
+            <div class="project-card">
+                <h3 class="lang-tr">Notitia Haber Uygulaması</h3>
+                <h3 class="lang-en">Notitia News Application</h3>
+                <p class="lang-tr">Expo ve Firebase kullanılarak geliştirilmiş modern ve yüksek sadakatli React Native mobil haber uygulaması. Kullanıcıların kategorize edilmiş haber portallarına erişmesini, kişiselleştirilmiş favori listeleri yönetmesini ve profillerini güvenle saklamasını sağlar.</p>
+                <p class="lang-en">A modern, high-fidelity React Native mobile application built with Expo and Firebase. Designed to aggregate news under organized categories, manage persistent favorites lists, and secure user profiles.</p>
+                <div class="project-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Expo</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Mobile App</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Notitia-News-Application" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 4: Perde Dünyası -->
             <div class="project-card">
                 <h3 class="lang-tr">Perde Dünyası</h3>
                 <h3 class="lang-en">Perde Dünyası</h3>
-                <p class="lang-tr">Next.js (App Router) ve Supabase tabanlı, WhatsApp teklif entegrasyonu, etkileşimli ürün kataloğu, gelişmiş resim galerisi ve ziyaretçi analiz paneli sunan modern vitrin platformu.</p>
-                <p class="lang-en">A modern Next.js (App Router) & Supabase-based WhatsApp offer showcase with an interactive product catalog, advanced image gallery, and visitor analytics admin panel.</p>
+                <p class="lang-tr">Perde ve jaluzi mağazası için Next.js ve Supabase ile geliştirilmiş, modern ve yüksek performanslı full-stack e-ticaret vitrin sitesi. Ürün kataloğu, aktif campaigns ve güvenli yönetim paneli içerir.</p>
+                <p class="lang-en">A modern, highly-responsive, and full-stack web application designed for a curtain and blinds retail store. Features a premium UI to showcase products, catalogs, and announcements with a secure admin panel.</p>
                 <div class="project-tags">
                     <span class="tag">Next.js</span>
                     <span class="tag">Supabase</span>
@@ -418,68 +453,17 @@
                     <span class="tag">Web App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://emirtdede.com" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/emirtdede/Perde-Dunyasi" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://perdedunyasi.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
-            <!-- Project 3: Social Crisis Simulation Platform -->
+            <!-- Project 5: Student Information System -->
             <div class="project-card">
-                <h3 class="lang-tr">Toplumsal Kriz Simülasyon Platformu</h3>
-                <h3 class="lang-en">Social Crisis Simulation Platform</h3>
-                <p class="lang-tr">Afet, pandemi, savaş ve ekonomik kriz gibi senaryolarda karar verme süreçlerini geliştirmeyi amaçlayan, TÜBİTAK 2209-A destekli mobil simülasyon platformu.</p>
-                <p class="lang-en">An interactive mobile simulation platform designed to improve decision-making in disaster, pandemic, war, and economic crises. Funded by TÜBİTAK 2209-A.</p>
-                <div class="project-tags">
-                    <span class="tag">Mobile</span>
-                    <span class="tag">Figma</span>
-                    <span class="tag">TÜBİTAK 2209-A</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.figma.com/@emirtdede" target="_blank" title="Figma Demo"><i class='bx bxl-figma'></i></a>
-                </div>
-            </div>
-
-            <!-- Project 4: Power Pilot -->
-            <div class="project-card">
-                <h3 class="lang-tr">Power Pilot</h3>
-                <h3 class="lang-en">Power Pilot</h3>
-                <p class="lang-tr">Bilgisayarların otomatik kapanma, yeniden başlatma, uyku ve hazırda bekletme modlarını otomatikleştiren, çok dilli destek sunan modern ve hafif Electron masaüstü uygulaması.</p>
-                <p class="lang-en">A modern, lightweight Electron-based power management application that automates PC shutdown, restart, sleep, and hibernation with multi-language support.</p>
-                <div class="project-tags">
-                    <span class="tag">Electron</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Desktop App</span>
-                    <span class="tag">HTML/CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                </div>
-            </div>
-
-            <!-- Project 5: Notitia News Application -->
-            <div class="project-card">
-                <h3 class="lang-tr">Notitia Haber Uygulaması</h3>
-                <h3 class="lang-en">Notitia News Application</h3>
-                <p class="lang-tr">React Native kullanılarak mobil platformlar için geliştirilen, Firebase gerçek zamanlı veritabanı altyapısıyla desteklenen mobil haber akışı uygulaması.</p>
-                <p class="lang-en">A mobile news application developed for Android and iOS using React Native and powered by Firebase real-time database.</p>
-                <div class="project-tags">
-                    <span class="tag">React Native</span>
-                    <span class="tag">Firebase</span>
-                    <span class="tag">Mobile App</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                </div>
-            </div>
-
-            <!-- Project 6: Student Information System -->
-            <div class="project-card">
-                <h3 class="lang-tr">Öğrenci Bilgi Sistemi (SIS)</h3>
+                <h3 class="lang-tr">Öğrenci Bilgi Sistemi (OBS)</h3>
                 <h3 class="lang-en">Student Information System (SIS)</h3>
-                <p class="lang-tr">Öğrencilerin akademik süreçlerini, kayıtlarını, ders programlarını ve notlarını yönetmek amacıyla HTML, CSS, JS, ASP.NET, Oracle SQL ve MVC mimarisiyle geliştirilen web uygulaması.</p>
-                <p class="lang-en">A student management web application developed using HTML, CSS, JavaScript, Bootstrap, ASP.NET, Oracle SQL, and MVC technologies for educational institutions.</p>
+                <p class="lang-tr">Bilgisayar mühendisliği öğrencileri ve akademik danışmanlar için HTML, CSS, JS, ASP.NET MVC ve Oracle SQL ile geliştirilmiş yüksek yoğunluklu, modern ve tam uyumlu akademik portal.</p>
+                <p class="lang-en">A high-density, modern, and fully responsive academic portal designed for computer engineering students and academic advisors, built with ASP.NET MVC and Oracle SQL.</p>
                 <div class="project-tags">
                     <span class="tag">ASP.NET MVC</span>
                     <span class="tag">Oracle SQL</span>
@@ -487,16 +471,16 @@
                     <span class="tag">SIS</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Student-Information-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 7: Medipro Nihon Kohden AED Site -->
+            <!-- Project 6: Medipro Nihon Kohden AED Site -->
             <div class="project-card">
                 <h3 class="lang-tr">Medipro Nihon Kohden AED Site</h3>
                 <h3 class="lang-en">Medipro Nihon Kohden AED Site</h3>
-                <p class="lang-tr">Dinamik bir yönetim paneli altyapısıyla geliştirilmiş, teknik bilgisi olmayan yöneticilerin tüm web sitesi içeriğini kolayca güncelleyebilmesini sağlayan kurumsal tanıtım platformu.</p>
-                <p class="lang-en">A platform built with a fully dynamic architecture supported by a custom admin panel, allowing non-technical administrators to manage and update all website content.</p>
+                <p class="lang-tr">Türkiye distribütörü Medipro için Cardiolife AED-3100 cihazını tanıtan, özel bir içerik yönetim sistemi (CMS) ve gelişmiş ziyaretçi analiz paneline sahip full-stack web uygulaması.</p>
+                <p class="lang-en">A full-stack web application showcasing the Nihon Kohden Cardiolife AED-3100 device for its Turkey distributor Medipro, featuring a content management system (CMS) and a visitor analytics dashboard.</p>
                 <div class="project-tags">
                     <span class="tag">JavaScript</span>
                     <span class="tag">Node.js</span>
@@ -504,120 +488,195 @@
                     <span class="tag">Web App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Medipro-NihonKohden-AED-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 8: Medipro Electronic Signature -->
-            <div class="project-card">
-                <h3 class="lang-tr">Medipro Elektronik İmza</h3>
-                <h3 class="lang-en">Medipro Electronic Signature</h3>
-                <p class="lang-tr">Klinik evrak ve hekim raporlama sistemleri için entegre edilmiş, güvenli, yasal mevzuatlara uygun ve doğrulanabilir e-imza entegrasyonu bileşeni.</p>
-                <p class="lang-en">An integrated, secure, and legally compliant electronic signature module designed for clinical document approvals and physician reporting systems.</p>
-                <div class="project-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">E-Signature</span>
-                    <span class="tag">Security</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                </div>
-            </div>
-
-            <!-- Project 9: Electronic Daybook Ledger -->
+            <!-- Project 7: Electronic Daybook Ledger -->
             <div class="project-card">
                 <h3 class="lang-tr">Elektronik Yevmiye Defteri</h3>
                 <h3 class="lang-en">Electronic Daybook Ledger</h3>
-                <p class="lang-tr">Elektronik yevmiye defterlerinin resmi standartlara uygun olarak dijital ortamda tutulmasını, doğrulanmasını ve arşivlenmesini sağlayan finans/muhasebe yazılımı.</p>
-                <p class="lang-en">A business financial application designed to securely maintain, validate, and digitally archive official electronic transaction daybooks and general ledgers.</p>
+                <p class="lang-tr">Çalışan puantajlarını, hak edişlerini, avanslarını ve kasa bakiyelerini dijitalleştirmek için harici API veya muhasebe sunucularından tamamen bağımsız çalışan, çevrimdışı öncelikli kurumsal masaüstü uygulaması.</p>
+                <p class="lang-en">An autonomous, offline-first corporate desktop application designed to replace physical general ledgers by digitizing timesheets, progress payments, advances, and cash register balances.</p>
                 <div class="project-tags">
                     <span class="tag">JavaScript</span>
                     <span class="tag">Financial IT</span>
-                    <span class="tag">Data Security</span>
+                    <span class="tag">Offline-First</span>
+                    <span class="tag">Desktop App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Elektronik-Yevmiye-Defteri" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 10: Basic OS -->
+            <!-- Project 8: Power Pilot -->
             <div class="project-card">
-                <h3 class="lang-tr">Temel İşletim Sistemi (Basic OS)</h3>
-                <h3 class="lang-en">Basic Operating System</h3>
-                <p class="lang-tr">Assembly programlama diliyle yazılmış, 6 temel komut satırı komutunu destekleyen, bilgisayar mimarisi ve donanım etkileşimlerini simüle eden mikro işletim sistemi.</p>
-                <p class="lang-en">A low-level operating system kernel featuring 6 built-in command line commands, written entirely in Assembly language to demonstrate low-level computer architecture.</p>
+                <h3 class="lang-tr">Power Pilot</h3>
+                <h3 class="lang-en">Power Pilot</h3>
+                <p class="lang-tr">Windows işletim sisteminde planlanmış zamanlayıcılar ve özel geri sayım ön ayarları kullanarak kapatma, yeniden başlatma ve uyku gibi güç durumlarını otomatikleştiren, Electron tabanlı hafif masaüstü uygulaması.</p>
+                <p class="lang-en">A modern, lightweight, and responsive desktop application developed with Electron. Automates system power state transitions (Shutdown, Restart, Sleep, Hibernate) on Windows using scheduled timers.</p>
                 <div class="project-tags">
-                    <span class="tag">Assembly</span>
-                    <span class="tag">OS Kernel</span>
-                    <span class="tag">Low-Level</span>
+                    <span class="tag">Electron</span>
+                    <span class="tag">Desktop App</span>
+                    <span class="tag">Windows Automation</span>
+                    <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Power-Pilot" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 11: ML Classification Pipeline -->
+            <!-- Project 9: Medipro 2026 Kart -->
             <div class="project-card">
-                <h3 class="lang-tr">Makine Öğrenmesi Sınıflandırma Pipeline'ı</h3>
-                <h3 class="lang-en">ML Classification Pipeline</h3>
-                <p class="lang-tr">Metin sınıflandırma görevleri için model eğitimi, değerlendirmesi ve en iyi model seçimini gerçekleştiren makine öğrenmesi pipeline'ı.</p>
-                <p class="lang-en">A Python-based machine learning pipeline for training, evaluating, and selecting optimal models for text classification tasks.</p>
+                <h3 class="lang-tr">Medipro 2026 Yılbaşı Kartı</h3>
+                <h3 class="lang-en">Medipro 2026 Card</h3>
+                <p class="lang-tr">Medipro ailesi için özel olarak tasarlanmış, güzel bir tatil teması, özel mesajlar ve tam ekran kutlama videosuna yumuşak geçişler içeren premium, etkileşimli ve görsel olarak çarpıcı web kartı.</p>
+                <p class="lang-en">An interactive, premium, and visually stunning web-based New Year greeting card designed specifically for the Medipro Family, featuring holiday themes and transition into full-screen video.</p>
                 <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Premium UI</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Medipro-2026-Kart" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 12: Sentiment Analysis Preprocessing -->
+            <!-- Project 10: Dental Health Tracking App -->
             <div class="project-card">
-                <h3 class="lang-tr">Duygu Analizi Ön İşleme Pipeline'ı</h3>
-                <h3 class="lang-en">Sentiment Analysis Preprocessing</h3>
-                <p class="lang-tr">Çok dilli metin verilerini duygu analizi ve sınıflandırma görevleri için hazırlayan Python tabanlı bir veri işleme pipeline’ı geliştirdim.</p>
-                <p class="lang-en">A Python-based preprocessing pipeline that prepares multilingual text data for sentiment analysis and classification tasks.</p>
+                <h3 class="lang-tr">Ağız ve Diş Sağlığı Takip Uygulaması</h3>
+                <h3 class="lang-en">Dental Health Tracking App</h3>
+                <p class="lang-tr">Hasta dosyası yönetimi, randevu planlama ve kişisel ağız hijyeni takibi için hastalar, diş hekimleri ve klinik asistanlarına özel yetkilendirme katmanları sunan kapsamlı full-stack web uygulaması.</p>
+                <p class="lang-en">A comprehensive full-stack web application for patient file management, appointment scheduling, and personal dental hygiene tracking, with specialized access roles.</p>
                 <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">NLP</span>
-                    <span class="tag">Data Preprocessing</span>
+                    <span class="tag">ASP.NET Core</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">Full-Stack</span>
+                    <span class="tag">Clinic Management</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Oral-and-Dental-Health-Tracking-Application" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 13: AA News Crawler -->
+            <!-- Project 11: AA News Crawler -->
             <div class="project-card">
                 <h3 class="lang-tr">AA Haber Crawler – Veri Madenciliği</h3>
                 <h3 class="lang-en">AA News Crawler – Data Mining</h3>
-                <p class="lang-tr">Anadolu Ajansı gibi haber kaynaklarından yapılandırılmış veri çekmek amacıyla Python tabanlı verimli ve hata toleranslı bir web crawler geliştirdim.</p>
-                <p class="lang-en">A Python-based web crawler designed for structured data extraction from online news sources (e.g., Anadolu Ajansı), focused on efficiency and fault-tolerance.</p>
+                <p class="lang-tr">Belirlenen ID aralıklarındaki haber makalelerini (başlıklar, özetler, tam metinler, kategoriler, diller ve yüksek kaliteli resimler) Anadolu Ajansı portalından çekmek için Python ile yazılmış otomatik veri madenciliği aracı.</p>
+                <p class="lang-en">An automated, robust, and clean Web Crawler and Data Mining tool built with Python to extract news articles, categories, and high-quality images from the Anadolu Agency (AA) news portal.</p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">Web Scraping</span>
                     <span class="tag">Data Mining</span>
+                    <span class="tag">BeautifulSoup</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/AANewsCrawler-DataMining" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 14: Dental Health Tracking App -->
+            <!-- Project 12: ML Classification Pipeline -->
             <div class="project-card">
-                <h3 class="lang-tr">Ağız ve Diş Sağlığı Takip Uygulaması</h3>
-                <h3 class="lang-en">Dental Health Tracking App</h3>
-                <p class="lang-tr">ASP.NET Core MVC kullanılarak geliştirilen ağız ve diş sağlığı izleme ve randevu takip uygulaması.</p>
-                <p class="lang-en">Oral and dental health monitoring and appointment tracking application developed with ASP .NET Core MVC.</p>
+                <h3 class="lang-tr">Makine Öğrenmesi Sınıflandırma Pipeline'ı</h3>
+                <h3 class="lang-en">ML Classification Pipeline</h3>
+                <p class="lang-tr">Metin sınıflandırma görevleri için TF-IDF vektörleştirme ve en iyi hiperparametre kombinasyonlarını bulmak amacıyla Scikit-Learn Grid Search kullanan, en iyi modelleri otomatik kaydeden uçtan uca Python makine öğrenmesi hattı.</p>
+                <p class="lang-en">An end-to-end Machine Learning pipeline built in Python to train, tune, and evaluate multiple classification models for text categorization, utilizing TF-IDF and Grid Search CV.</p>
                 <div class="project-tags">
-                    <span class="tag">ASP.NET Core</span>
-                    <span class="tag">MVC</span>
-                    <span class="tag">SQL Server</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">Text Classification</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede?tab=repositories" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/ML-Pipeline-TextClassification" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 13: Sentiment Analysis Preprocessing -->
+            <div class="project-card">
+                <h3 class="lang-tr">Duygu Analizi Ön İşleme Sistemi</h3>
+                <h3 class="lang-en">Sentiment Analysis Preprocessing</h3>
+                <p class="lang-tr">Ham JSON veri kümelerini temizlemek, filtrelemek, dillere göre ayırmak ve anahtar kelime eşleştirmeli duygu sınıflandırması yapmak için tasarlanmış Python tabanlı kapsamlı veri madenciliği hattı.</p>
+                <p class="lang-en">A comprehensive Python-based data mining pipeline designed to clean, filter, and segregate raw JSON datasets by language, followed by keyword-matching sentiment categorization.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Preprocessing</span>
+                    <span class="tag">Sentiment Analysis</span>
+                    <span class="tag">Data Mining</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Preprocessing-Sentiment-Analysis-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 14: Wine Quality Prediction KNNR SVR -->
+            <div class="project-card">
+                <h3 class="lang-tr">Beyaz Şarap Kalitesi Tahmini</h3>
+                <h3 class="lang-en">Wine Quality Prediction (KNNR/SVR)</h3>
+                <p class="lang-tr">Kimyasal özelliklerine göre beyaz şarap kalitesini tahmin etmek amacıyla K-En Yakın Komşu Regresyonu (KNNR) ve Destek Vektör Regresyonu (SVR) modellerini eğiten ve karşılaştıran veri bilimi projesi.</p>
+                <p class="lang-en">A project focused on developing machine learning regression models (KNNR and SVR) to predict the quality of white wine based on its chemical profile.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Regression</span>
+                    <span class="tag">Data Science</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Wine-Quality-Prediction-KNNR-SVR" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 15: Basic OS -->
+            <div class="project-card">
+                <h3 class="lang-tr">Temel İşletim Sistemi (Basic OS)</h3>
+                <h3 class="lang-en">Basic Operating System</h3>
+                <p class="lang-tr">Özel bir önyükleyici (bootloader) ve komut satırı arayüzü çekirdeğinden (kernel) oluşan, donanım kontrolü ve bellek eşleme temellerini gösteren Assembly dilinde yazılmış 16-bit gerçek mod işletim sistemi.</p>
+                <p class="lang-en">A simple 16-bit real-mode operating system written in Assembly, consisting of a custom bootloader and a CLI kernel module to demonstrate low-level computer architecture.</p>
+                <div class="project-tags">
+                    <span class="tag">Assembly</span>
+                    <span class="tag">OS Kernel</span>
+                    <span class="tag">Low-Level</span>
+                    <span class="tag">16-Bit</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Basic-Operating-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 16: Personal Web Site -->
+            <div class="project-card">
+                <h3 class="lang-tr">Kişisel Web Sitesi</h3>
+                <h3 class="lang-en">Personal Web Site</h3>
+                <p class="lang-tr">Yazılım projelerini, teknik becerileri ve akademik başarıları sergilemek için modern, son derece etkileşimli, özel koyu gül temalı ve hızlı istemci taraflı performans odaklı kişisel portföy web sitesi.</p>
+                <p class="lang-en">A modern, highly interactive, and visually polished personal portfolio website designed with a custom premium dark-rose theme and optimized for fast client-side performance.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Portfolio</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Personal-Web-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://emirtdede.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 17: Medipro Electronic Signature -->
+            <div class="project-card">
+                <h3 class="lang-tr">Medipro Kurumsal E-Posta İmzası</h3>
+                <h3 class="lang-en">Medipro Electronic Signature</h3>
+                <p class="lang-tr">Tüm popüler e-posta istemcilerinde (Outlook, Gmail, iOS Mail vb.) tutarlı ve sorunsuz görüntülenecek şekilde yüksek uyumlulukla tasarlanmış kurumsal HTML e-posta imzası şablonu.</p>
+                <p class="lang-en">A highly compatible corporate HTML email signature template designed to render consistently across all major email clients (Outlook, Gmail, iOS/Android Mail, etc.).</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Email Signature</span>
+                    <span class="tag">Compatibility</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Medipro-Electronic-Signature" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
         </div>

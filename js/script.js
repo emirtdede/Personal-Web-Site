@@ -53,20 +53,12 @@ window.onscroll = () => {
 }
 
 // --- Language Switcher Logic ---
-const langButtons = document.querySelectorAll('.lang-btn');
+const langToggle = document.getElementById('lang-toggle');
 
 function setLanguage(lang) {
     document.documentElement.setAttribute('lang', lang);
     localStorage.setItem('preferred-language', lang);
     
-    langButtons.forEach(btn => {
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
     // Update input placeholders dynamically based on language
     const placeholders = {
         tr: {
@@ -98,13 +90,14 @@ function setLanguage(lang) {
     if (messageInput) messageInput.placeholder = placeholders[lang].message;
 }
 
-// Event Listeners for language buttons
-langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
+// Event Listeners for language toggle
+if (langToggle) {
+    langToggle.addEventListener('click', () => {
+        const currentLang = document.documentElement.getAttribute('lang') || 'tr';
+        const newLang = currentLang === 'tr' ? 'en' : 'tr';
+        setLanguage(newLang);
     });
-});
+}
 
 // Load saved language on startup
 document.addEventListener('DOMContentLoaded', () => {

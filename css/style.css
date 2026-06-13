@@ -1020,38 +1020,21 @@ span {
     margin-left: 3.5rem;
     display: inline-flex;
     align-items: center;
+    vertical-align: middle;
     z-index: 101;
 }
 
-.lang-btn {
-    font-size: 1.5rem;
+.lang-toggle {
+    font-size: 2.0rem;
     color: var(--text-color);
-    background: transparent;
-    border: .15rem solid var(--main-color);
-    padding: 0.3rem 1rem;
     cursor: pointer;
     transition: .3s ease;
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
 }
 
-.lang-btn:first-child {
-    border-top-left-radius: .6rem;
-    border-bottom-left-radius: .6rem;
-    border-right: none;
-}
-
-.lang-btn:last-child {
-    border-top-right-radius: .6rem;
-    border-bottom-right-radius: .6rem;
-}
-
-.lang-btn.active {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-.lang-btn:hover:not(.active) {
-    background: rgba(204, 149, 149, 0.2);
+.lang-toggle:hover {
+    color: var(--main-color);
 }
 
 /* Language display switching rules */
@@ -1190,9 +1173,18 @@ html[lang="tr"] .lang-en {
 
 @media (max-width: 768px) {
     .lang-switcher-container {
-        margin: 2rem 0;
+        display: flex;
         justify-content: center;
+        margin: 3rem 0;
         width: 100%;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .lang-switcher-container {
+        transform: translateX(0);
+        transition-delay: .25s;
     }
 }
 
