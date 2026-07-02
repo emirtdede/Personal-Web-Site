@@ -84,17 +84,144 @@ section {
 }
 
 .home {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 0 9%;
-    background:url('/images/home.jpg') no-repeat;
+    background: var(--bg-color) url('../public/main.webp') no-repeat center center;
     background-size: cover;
-    background-position: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(52, 38, 38, .92) 0%,
+        rgba(52, 38, 38, .78) 34%,
+        rgba(52, 38, 38, .22) 62%,
+        rgba(52, 38, 38, .08) 100%
+    );
 }
 
 .home-content {
+    flex: 0 1 60rem;
     max-width: 60rem;
     z-index: 99;
+}
+
+.home-spotlight {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+    will-change: mask-image, opacity;
+    z-index: 3;
+    -webkit-mask-image: radial-gradient(
+        circle var(--spotlight-size) at var(--x) var(--y),
+        #000 0%,
+        #000 48%,
+        rgba(0, 0, 0, .65) 62%,
+        transparent 74%
+    );
+    mask-image: radial-gradient(
+        circle var(--spotlight-size) at var(--x) var(--y),
+        #000 0%,
+        #000 48%,
+        rgba(0, 0, 0, .65) 62%,
+        transparent 74%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.spotlight-reveal {
+    --x: 50%;
+    --y: 50%;
+    --spotlight-size: clamp(14rem, 18vw, 28rem);
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.spotlight-reveal.home-spotlight {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+}
+
+.spotlight-reveal__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+.spotlight-reveal__image--base {
+    z-index: 1;
+}
+
+.home-spotlight .spotlight-reveal__image--base {
+    opacity: 0;
+}
+
+.home-spotlight .spotlight-reveal__image--overlay {
+    opacity: 1;
+    transition: none;
+    will-change: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.spotlight-reveal__image--overlay {
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .35s ease;
+    will-change: mask-image, opacity;
+    -webkit-mask-image: radial-gradient(
+        circle var(--spotlight-size) at var(--x) var(--y),
+        #000 0%,
+        #000 48%,
+        rgba(0, 0, 0, .65) 62%,
+        transparent 74%
+    );
+    mask-image: radial-gradient(
+        circle var(--spotlight-size) at var(--x) var(--y),
+        #000 0%,
+        #000 48%,
+        rgba(0, 0, 0, .65) 62%,
+        transparent 74%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.spotlight-reveal.is-active .spotlight-reveal__image--overlay {
+    opacity: 1;
+}
+
+.home:hover .home-spotlight,
+.home.is-spotlight-active .home-spotlight,
+.home-spotlight.is-active {
+    opacity: 1;
 }
 
 .home-content h1 {
@@ -243,6 +370,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     width: 170px;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
 }
 
 .home-sci a {
@@ -316,6 +444,8 @@ span {
 
 .about-img img {
     width: 90%;
+    height: 90%;
+    object-fit: cover;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
 }
@@ -838,6 +968,14 @@ span {
         background: var(--bg-color);
     }
 
+    .home {
+        justify-content: center;
+    }
+
+    .spotlight-reveal {
+        --spotlight-size: clamp(10rem, 34vw, 18rem);
+    }
+
     #menu-icon {
         display: block;
     }
@@ -1343,4 +1481,4 @@ html[lang="tr"] .lang-en {
 
 .custom-alert-box.error-box .alert-btn::before {
     background: var(--bg-color);
-}
+}

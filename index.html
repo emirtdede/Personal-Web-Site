@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>emirtdede</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=spotlight-3">
     
     <!-- Custom favicon -->
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="public/icon.png" type="image/png">
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -100,6 +100,11 @@
             <span class="animate" style="--i:6;"></span>
         </div>
 
+        <div class="spotlight-reveal home-spotlight" aria-label="Hero spotlight image reveal">
+            <img class="spotlight-reveal__image spotlight-reveal__image--base" src="public/main.webp" alt="Emir Dede hero visual">
+            <img class="spotlight-reveal__image spotlight-reveal__image--overlay" src="public/main-two.webp" alt="" aria-hidden="true">
+        </div>
+
         <span class="animate home-img" style="--i:7;"></span>
     </section>
 
@@ -112,7 +117,7 @@
         </h2>
         
         <div class="about-img">
-            <img src="images/about.jpg" alt="Emir Dede">
+            <img src="public/about.webp" alt="Emir Dede">
             <span class="circle-spin"></span>
             <span class="animate scroll" style="--i:2;"></span>
         </div>
@@ -387,6 +392,75 @@
         </h2>
 
         <div class="projects-row">
+            <!-- New Project: Velox -->
+            <div class="project-card">
+                <h3 class="lang-tr">Velox Akıllı Okuma Asistanı</h3>
+                <h3 class="lang-en">Velox Intelligent Reading Workspace</h3>
+                <p class="lang-tr">Belgeler, notlar ve ilerleme takibi için yerel öncelikli akıllı okuma çalışma alanı. RSVP tarzı hızlı okuma, belge bazlı not alma, okuma analitikleri, isteğe bağlı Gemini destekli AI özellikleri ve çoklu tema desteğini bir araya getirir.</p>
+                <p class="lang-en">A local-first intelligent reading workspace for documents, notes, and progress tracking, combining RSVP-style speed reading, per-document notes, reading analytics, optional Gemini-powered AI features, and multiple themes.</p>
+                <div class="project-tags">
+                    <span class="tag">Reading App</span>
+                    <span class="tag">Local-First</span>
+                    <span class="tag">Gemini AI</span>
+                    <span class="tag">Analytics</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Velox-Akilli-Okuma-Asistani" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- New Project: Quick Cam Widget -->
+            <div class="project-card">
+                <h3 class="lang-tr">Quick Cam Widget</h3>
+                <h3 class="lang-en">Quick Cam Widget</h3>
+                <p class="lang-tr">vellium.dev tarafından geliştirilen hafif bir masaüstü kamera paneli. Sistem tepsisinden açılır, minimal ve detaylı görünüm seçenekleri sunar, webcam kadrajını ayarlamaya yardımcı olur ve ekran görüntülerini yerel olarak kaydeder.</p>
+                <p class="lang-en">A lightweight desktop camera panel by vellium.dev that opens from the system tray, supports minimal and detailed views, helps with webcam framing, and saves snapshots locally.</p>
+                <div class="project-tags">
+                    <span class="tag">Desktop App</span>
+                    <span class="tag">Webcam</span>
+                    <span class="tag">System Tray</span>
+                    <span class="tag">Local Snapshots</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Quick-Cam-Widget" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- New Project: Tactile Satisfying Key Sounds -->
+            <div class="project-card">
+                <h3 class="lang-tr">Tactile Klavye Sesleri</h3>
+                <h3 class="lang-en">Tactile Satisfying Key Sounds</h3>
+                <p class="lang-tr">Electron ile geliştirilmiş, yazma deneyimine tatmin edici mekanik klavye switch ses profilleri ekleyen premium ve hafif masaüstü uygulaması. Farklı ses profilleriyle kişiselleştirilebilir bir typing deneyimi sunar.</p>
+                <p class="lang-en">A premium, lightweight desktop application built with Electron that brings satisfying mechanical keyboard switch sound profiles to the typing experience through customizable audio feedback.</p>
+                <div class="project-tags">
+                    <span class="tag">Electron</span>
+                    <span class="tag">Desktop App</span>
+                    <span class="tag">Audio UX</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Tactile-Satisfying-Key-Sounds" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <!-- New Project: Lale Perde Site -->
+            <div class="project-card">
+                <h3 class="lang-tr">Lale Perde</h3>
+                <h3 class="lang-en">Lale Perde</h3>
+                <p class="lang-tr">Lüks perde ve tekstil işletmesi için özelleştirilmiş, yüksek kaliteli kurumsal e-ticaret ve yönetim platformu. Modern ürün vitrini, yönetim süreçleri ve canlı yayınlanmış web deneyimi içerir.</p>
+                <p class="lang-en">A high-end corporate e-commerce and administration platform customized for a luxury curtain and textile business, combining a polished storefront with management workflows.</p>
+                <div class="project-tags">
+                    <span class="tag">E-Commerce</span>
+                    <span class="tag">Admin Panel</span>
+                    <span class="tag">Corporate Web</span>
+                    <span class="tag">Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/emirtdede/Lale-Perde-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://laleperde.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
             <!-- Project 1: EEG/EMG Integration Microservice -->
             <div class="project-card">
                 <h3 class="lang-tr">EEG/EMG Veri Entegrasyonu Mikroservisi</h3>
@@ -782,7 +856,7 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=spotlight-3"></script>
 </body>
 
 </html>

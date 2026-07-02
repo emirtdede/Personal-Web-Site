@@ -99,10 +99,73 @@ if (langToggle) {
     });
 }
 
+function initSpotlightReveal() {
+    const revealers = document.querySelectorAll('.spotlight-reveal');
+
+    revealers.forEach(reveal => {
+        const interactionArea = reveal.closest('.home') || reveal;
+        let frameId = 0;
+        let nextX = 50;
+        let nextY = 50;
+
+        const applyMaskPosition = () => {
+            reveal.style.setProperty('--x', `${nextX}%`);
+            reveal.style.setProperty('--y', `${nextY}%`);
+            frameId = 0;
+        };
+
+        const queueMaskPosition = (event) => {
+            const rect = reveal.getBoundingClientRect();
+            nextX = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+            nextY = Math.min(100, Math.max(0, ((event.clientY - rect.top) / rect.height) * 100));
+            reveal.classList.add('is-active');
+            interactionArea.classList.add('is-spotlight-active');
+
+            if (!frameId) {
+                frameId = requestAnimationFrame(applyMaskPosition);
+            }
+        };
+
+        const resetMaskPosition = () => {
+            nextX = 50;
+            nextY = 50;
+            reveal.classList.remove('is-active');
+            interactionArea.classList.remove('is-spotlight-active');
+
+            if (!frameId) {
+                frameId = requestAnimationFrame(applyMaskPosition);
+            }
+        };
+
+        const resetWhenOutside = (event) => {
+            if (!reveal.classList.contains('is-active')) return;
+
+            const rect = reveal.getBoundingClientRect();
+            const isOutside =
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom;
+
+            if (isOutside) {
+                resetMaskPosition();
+            }
+        };
+
+        const moveEvent = window.PointerEvent ? 'pointermove' : 'mousemove';
+        const leaveEvent = window.PointerEvent ? 'pointerleave' : 'mouseleave';
+
+        interactionArea.addEventListener(moveEvent, queueMaskPosition, { passive: true });
+        interactionArea.addEventListener(leaveEvent, resetMaskPosition);
+        document.addEventListener(moveEvent, resetWhenOutside, { passive: true });
+    });
+}
+
 // Load saved language on startup
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred-language') || 'tr';
     setLanguage(savedLang);
+    initSpotlightReveal();
     
     // Set dynamic year
     const yearEl = document.getElementById('current-year');
@@ -262,4 +325,4 @@ if (contactForm) {
             showCustomAlert('error', errorMessages[currentLang]);
         });
     });
-}
+}
