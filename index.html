@@ -5,26 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emirtdede</title>
+    <title>Emir Dede | BT Çözüm & Medikal Entegrasyon Uzmanı</title>
 
-    <link rel="stylesheet" href="css/style.css?v=spotlight-3">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Emir Dede | BT Çözüm & Medikal Entegrasyon Uzmanı">
+    <meta name="description" content="Sağlık bilişimi, medikal cihaz entegrasyonu (HL7, DICOM, PACS/HIS), full-stack yazılım ve veri bilimi projeleri. 100+ hastane ve 1000+ cihaz entegrasyon deneyimi.">
+    <meta name="keywords" content="Emir Dede, Medikal Entegrasyon, HL7, DICOM, PACS, VNA, HIS, Sağlık Bilişimi, Python, C#, ASP.NET Core, Portfolio">
+    <meta name="author" content="Emir Dede">
+    <meta name="theme-color" content="#342626">
+    <link rel="canonical" href="https://emirtdede.vercel.app/">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emirtdede.vercel.app/">
+    <meta property="og:title" content="Emir Dede | BT Çözüm & Medikal Entegrasyon Uzmanı">
+    <meta property="og:description" content="Sağlık bilişimi, medikal cihaz entegrasyonu (HL7, DICOM, PACS/HIS), mikroservis mimarileri ve yazılım projeleri.">
+    <meta property="og:image" content="https://emirtdede.vercel.app/public/main.webp">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Emir Dede Portföy">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://emirtdede.vercel.app/">
+    <meta name="twitter:title" content="Emir Dede | BT Çözüm & Medikal Entegrasyon Uzmanı">
+    <meta name="twitter:description" content="Sağlık bilişimi, medikal cihaz entegrasyonu (HL7, DICOM, PACS/HIS), mikroservis mimarileri ve yazılım projeleri.">
+    <meta name="twitter:image" content="https://emirtdede.vercel.app/public/main.webp">
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emir Dede",
+      "jobTitle": "IT Solution & Medical Integration Specialist",
+      "url": "https://emirtdede.vercel.app/",
+      "image": "https://emirtdede.vercel.app/public/about.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/emirtdede/",
+        "https://github.com/emirtdede",
+        "https://instagram.com/emirtdede"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Osmaniye Korkut Ata University"
+      },
+      "knowsAbout": [
+        "Health Level 7 (HL7)",
+        "DICOM",
+        "PACS",
+        "VNA",
+        "Medical Device Integration",
+        "Python",
+        "C#",
+        "ASP.NET Core",
+        "SQL Server"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts Preconnect (Parallel Loading) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Optimized Favicon Set -->
+    <link rel="icon" href="public/favicon.ico" sizes="any">
+    <link rel="icon" href="public/icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="public/icon-192.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css?v=spotlight-4">
     
-    <!-- Custom favicon -->
-    <link rel="icon" href="public/icon.png" type="image/png">
-
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Skip link for keyboard accessibility -->
+    <a href="#home" class="skip-link">İçeriğe Atla / Skip to Content</a>
 
     <!-- header design -->
     <header class="header">
         <a href="#" class="logo">emirtdede.com <span class="animate" style="--i:1;"></span></a>
 
-        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+        <div class="bx bx-menu" id="menu-icon" role="button" tabindex="0" aria-label="Menüyü Aç/Kapat"><span class="animate" style="--i:2;"></span></div>
 
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Ana Menü">
             <a href="#home" class="active">
                 <span class="lang-tr">Ana Sayfa</span>
                 <span class="lang-en">Home</span>
@@ -45,6 +112,10 @@
                 <span class="lang-tr">Projeler</span>
                 <span class="lang-en">Projects</span>
             </a>
+            <a href="cv.html" target="_blank" rel="noopener noreferrer" class="nav-cv-link">
+                <span class="lang-tr">CV / Özgeçmiş</span>
+                <span class="lang-en">CV / Resume</span>
+            </a>
             <a href="#contact">
                 <span class="lang-tr">İletişim</span>
                 <span class="lang-en">Contact</span>
@@ -52,7 +123,7 @@
 
             <!-- Language Switcher -->
             <div class="lang-switcher-container">
-                <i class='bx bx-world lang-toggle' id="lang-toggle" title="TR / EN"></i>
+                <i class='bx bx-world lang-toggle' id="lang-toggle" role="button" tabindex="0" aria-label="Dili Değiştir (TR / EN)" title="TR / EN"></i>
             </div>
 
             <span class="active-nav"></span>
@@ -74,17 +145,22 @@
                 <span class="animate" style="--i:3;"></span>
             </div>
             <p>
-                <span class="lang-tr">Yazılımcılar neden doğayı sevmez? Çünkü çok fazla böcek (bug) var!<br>1101100 1101111 1101100</span>
-                <span class="lang-en">Why don't programmers like nature? It has too many bugs!<br>1101100 1101111 1101100</span>
+                <span class="lang-tr">100'den fazla hastanede 1000'den fazla medikal cihazın entegrasyonu, klinik veri akışının sürekliliği (HL7, DICOM, PACS/HIS) ve mikroservis mimarileri üzerine uzmanlaşmış mühendislik çözümleri.</span>
+                <span class="lang-en">Engineering robust clinical data flow, medical device interoperability (HL7/DICOM), and microservice architectures across 100+ hospitals and 1000+ clinical devices.</span>
                 <span class="animate" style="--i:4;"></span>
             </p>
 
             <div class="btn-box">
-                <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" class="btn">
+                <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" rel="noopener noreferrer" class="btn" aria-label="LinkedIn Profili">
                     <span class="lang-tr">Beni İşe Al</span>
                     <span class="lang-en">Hire Me</span>
                 </a>
-                <a href="#contact" class="btn">
+                <a href="cv.html" target="_blank" rel="noopener noreferrer" class="btn btn-cv" aria-label="Özgeçmişi Görüntüle">
+                    <i class='bx bx-file-blank'></i>
+                    <span class="lang-tr">CV İncele</span>
+                    <span class="lang-en">View CV</span>
+                </a>
+                <a href="#contact" class="btn btn-outline" aria-label="İletişime Geç">
                     <span class="lang-tr">Konuşalım</span>
                     <span class="lang-en">Let's Talk</span>
                 </a>
@@ -93,10 +169,10 @@
         </div>
 
         <div class="home-sci">
-            <a href="https://www.linkedin.com/in/emirtdede/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/emirtdede" target="_blank"><i class='bx bxl-github' ></i></a>
-            <a href="https://www.twitch.tv/Mexonom" target="_blank"><i class='bx bxl-twitch' ></i></a>
-            <a href="https://instagram.com/emirtdede" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profili"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/emirtdede" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profili"><i class='bx bxl-github'></i></a>
+            <a href="https://www.twitch.tv/Mexonom" target="_blank" rel="noopener noreferrer" aria-label="Twitch Kanalı"><i class='bx bxl-twitch'></i></a>
+            <a href="https://instagram.com/emirtdede" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profili"><i class='bx bxl-instagram'></i></a>
             <span class="animate" style="--i:6;"></span>
         </div>
 
@@ -164,7 +240,12 @@
             </div>
             
             <div class="btn-box btns" style="margin-top: 3rem;">
-                <a href="#contact" class="btn">
+                <a href="cv.html" target="_blank" rel="noopener noreferrer" class="btn btn-cv" aria-label="Özgeçmişi İncele">
+                    <i class='bx bx-file-blank'></i>
+                    <span class="lang-tr">CV İncele</span>
+                    <span class="lang-en">View CV</span>
+                </a>
+                <a href="#contact" class="btn" aria-label="İletişime Geç">
                     <span class="lang-tr">İletişime Geç</span>
                     <span class="lang-en">Get in Touch</span>
                 </a>
@@ -386,14 +467,49 @@
     <!-- projects section design -->
     <section class="projects" id="projects">
         <h2 class="heading">
-            <span class="lang-tr">Akademik Projeler</span>
-            <span class="lang-en">Academic <span>Projects</span></span>
+            <span class="lang-tr">Öne Çıkan <span>Projeler</span></span>
+            <span class="lang-en">Featured <span>Projects</span></span>
             <span class="animate scroll" style="--i:1;"></span>
         </h2>
 
-        <div class="projects-row">
-            <!-- New Project: Velox -->
-            <div class="project-card">
+        <!-- Project Search & Category Filter Bar -->
+        <div class="projects-filter-wrapper">
+            <div class="projects-search-box">
+                <i class='bx bx-search'></i>
+                <input type="text" id="project-search" placeholder="Proje veya teknoloji ara..." aria-label="Projelerde ara">
+            </div>
+            <div class="projects-filter-bar" role="tablist" aria-label="Proje Kategorileri">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                    <span class="lang-tr">Tümü</span>
+                    <span class="lang-en">All</span>
+                    <span class="filter-count">21</span>
+                </button>
+                <button class="filter-btn" data-filter="medical" role="tab" aria-selected="false">
+                    <span class="lang-tr">Sağlık & Medikal</span>
+                    <span class="lang-en">Healthcare & Med</span>
+                    <span class="filter-count">5</span>
+                </button>
+                <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">
+                    <span class="lang-tr">Yapay Zekâ & Veri</span>
+                    <span class="lang-en">AI & Data Science</span>
+                    <span class="filter-count">6</span>
+                </button>
+                <button class="filter-btn" data-filter="desktop" role="tab" aria-selected="false">
+                    <span class="lang-tr">Masaüstü & Sistem</span>
+                    <span class="lang-en">Desktop & Systems</span>
+                    <span class="filter-count">6</span>
+                </button>
+                <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">
+                    <span class="lang-tr">Web & Platform</span>
+                    <span class="lang-en">Web & Platforms</span>
+                    <span class="filter-count">6</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="projects-row" id="projects-grid">
+            <!-- Project: Velox -->
+            <div class="project-card" data-category="ai desktop">
                 <h3 class="lang-tr">Velox Akıllı Okuma Asistanı</h3>
                 <h3 class="lang-en">Velox Intelligent Reading Workspace</h3>
                 <p class="lang-tr">Belgeler, notlar ve ilerleme takibi için yerel öncelikli akıllı okuma çalışma alanı. RSVP tarzı hızlı okuma, belge bazlı not alma, okuma analitikleri, isteğe bağlı Gemini destekli AI özellikleri ve çoklu tema desteğini bir araya getirir.</p>
@@ -405,12 +521,12 @@
                     <span class="tag">Analytics</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Velox-Akilli-Okuma-Asistani" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Velox-Akilli-Okuma-Asistani" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Velox GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- New Project: Quick Cam Widget -->
-            <div class="project-card">
+            <!-- Project: Quick Cam Widget -->
+            <div class="project-card" data-category="desktop">
                 <h3 class="lang-tr">Quick Cam Widget</h3>
                 <h3 class="lang-en">Quick Cam Widget</h3>
                 <p class="lang-tr">vellium.dev tarafından geliştirilen hafif bir masaüstü kamera paneli. Sistem tepsisinden açılır, minimal ve detaylı görünüm seçenekleri sunar, webcam kadrajını ayarlamaya yardımcı olur ve ekran görüntülerini yerel olarak kaydeder.</p>
@@ -422,12 +538,12 @@
                     <span class="tag">Local Snapshots</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Quick-Cam-Widget" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Quick-Cam-Widget" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Quick Cam Widget GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- New Project: Tactile Satisfying Key Sounds -->
-            <div class="project-card">
+            <!-- Project: Tactile Satisfying Key Sounds -->
+            <div class="project-card" data-category="desktop">
                 <h3 class="lang-tr">Tactile Klavye Sesleri</h3>
                 <h3 class="lang-en">Tactile Satisfying Key Sounds</h3>
                 <p class="lang-tr">Electron ile geliştirilmiş, yazma deneyimine tatmin edici mekanik klavye switch ses profilleri ekleyen premium ve hafif masaüstü uygulaması. Farklı ses profilleriyle kişiselleştirilebilir bir typing deneyimi sunar.</p>
@@ -439,12 +555,12 @@
                     <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Tactile-Satisfying-Key-Sounds" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Tactile-Satisfying-Key-Sounds" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Tactile Key Sounds GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- New Project: Lale Perde Site -->
-            <div class="project-card">
+            <!-- Project: Lale Perde Site -->
+            <div class="project-card" data-category="web">
                 <h3 class="lang-tr">Lale Perde</h3>
                 <h3 class="lang-en">Lale Perde</h3>
                 <p class="lang-tr">Lüks perde ve tekstil işletmesi için özelleştirilmiş, yüksek kaliteli kurumsal e-ticaret ve yönetim platformu. Modern ürün vitrini, yönetim süreçleri ve canlı yayınlanmış web deneyimi içerir.</p>
@@ -456,13 +572,13 @@
                     <span class="tag">Vercel</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Lale-Perde-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://laleperde.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/emirtdede/Lale-Perde-Site" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Lale Perde GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://laleperde.vercel.app/" target="_blank" rel="noopener noreferrer" title="Canlı Demo" aria-label="Lale Perde Canlı Demo"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
-            <!-- Project 1: EEG/EMG Integration Microservice -->
-            <div class="project-card">
+            <!-- Project: EEG/EMG Integration Microservice -->
+            <div class="project-card" data-category="medical">
                 <h3 class="lang-tr">EEG/EMG Veri Entegrasyonu Mikroservisi</h3>
                 <h3 class="lang-en">EEG/EMG Data Integration Microservice</h3>
                 <p class="lang-tr">Python tabanlı bir entegrasyon mikroservisi geliştirerek EEG ve EMG cihaz çıktılarının DICOM formatına dönüştürülmesini sağladım ve HIS/PACS sistemleri ile entegrasyonunu gerçekleştirdim.</p>
@@ -475,12 +591,12 @@
                     <span class="tag">Microservice</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede" target="_blank" rel="noopener noreferrer" title="GitHub Profili" aria-label="EEG/EMG GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 2: Social Crisis Simulation Platform -->
-            <div class="project-card">
+            <!-- Project: Social Crisis Simulation Platform -->
+            <div class="project-card" data-category="ai web">
                 <h3 class="lang-tr">Toplumsal Kriz Simülasyon Platformu</h3>
                 <h3 class="lang-en">Social Crisis Simulation Platform</h3>
                 <p class="lang-tr">Afet, pandemi, savaş ve ekonomik kriz gibi senaryolarda karar verme süreçlerini geliştirmeyi amaçlayan, yapay zekâ destekli, TÜBİTAK 2209-A destekli ve Figma tasarımlı mobil simülasyon platformu.</p>
@@ -492,13 +608,13 @@
                     <span class="tag">TÜBİTAK 2209-A</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Social-Crisis-Simulation-Platform" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.figma.com/@emirtdede" target="_blank" title="Figma Demo"><i class='bx bxl-figma'></i></a>
+                    <a href="https://github.com/emirtdede/Social-Crisis-Simulation-Platform" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Social Crisis GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.figma.com/@emirtdede" target="_blank" rel="noopener noreferrer" title="Figma Tasarımı" aria-label="Social Crisis Figma"><i class='bx bxl-figma'></i></a>
                 </div>
             </div>
 
-            <!-- Project 3: Notitia News Application -->
-            <div class="project-card">
+            <!-- Project: Notitia News Application -->
+            <div class="project-card" data-category="web">
                 <h3 class="lang-tr">Notitia Haber Uygulaması</h3>
                 <h3 class="lang-en">Notitia News Application</h3>
                 <p class="lang-tr">Expo ve Firebase kullanılarak geliştirilmiş modern ve yüksek sadakatli React Native mobil haber uygulaması. Kullanıcıların kategorize edilmiş haber portallarına erişmesini, kişiselleştirilmiş favori listeleri yönetmesini ve profillerini güvenle saklamasını sağlar.</p>
@@ -510,12 +626,12 @@
                     <span class="tag">Mobile App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Notitia-News-Application" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Notitia-News-Application" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Notitia News GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 4: Perde Dünyası -->
-            <div class="project-card">
+            <!-- Project: Perde Dünyası -->
+            <div class="project-card" data-category="web">
                 <h3 class="lang-tr">Perde Dünyası</h3>
                 <h3 class="lang-en">Perde Dünyası</h3>
                 <p class="lang-tr">Perde ve jaluzi mağazası için Next.js ve Supabase ile geliştirilmiş, modern ve yüksek performanslı full-stack e-ticaret vitrin sitesi. Ürün kataloğu, aktif campaigns ve güvenli yönetim paneli içerir.</p>
@@ -527,13 +643,13 @@
                     <span class="tag">Web App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Perde-Dunyasi" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://perdedunyasi.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/emirtdede/Perde-Dunyasi" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Perde Dünyası GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://perdedunyasi.vercel.app/" target="_blank" rel="noopener noreferrer" title="Canlı Demo" aria-label="Perde Dünyası Canlı Demo"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
-            <!-- Project 5: Student Information System -->
-            <div class="project-card">
+            <!-- Project: Student Information System -->
+            <div class="project-card" data-category="web">
                 <h3 class="lang-tr">Öğrenci Bilgi Sistemi (OBS)</h3>
                 <h3 class="lang-en">Student Information System (SIS)</h3>
                 <p class="lang-tr">Bilgisayar mühendisliği öğrencileri ve akademik danışmanlar için HTML, CSS, JS, ASP.NET MVC ve Oracle SQL ile geliştirilmiş yüksek yoğunluklu, modern ve tam uyumlu akademik portal.</p>
@@ -545,12 +661,12 @@
                     <span class="tag">SIS</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Student-Information-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Student-Information-System" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="OBS GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 6: Medipro Nihon Kohden AED Site -->
-            <div class="project-card">
+            <!-- Project: Medipro Nihon Kohden AED Site -->
+            <div class="project-card" data-category="medical web">
                 <h3 class="lang-tr">Medipro Nihon Kohden AED Site</h3>
                 <h3 class="lang-en">Medipro Nihon Kohden AED Site</h3>
                 <p class="lang-tr">Türkiye distribütörü Medipro için Cardiolife AED-3100 cihazını tanıtan, özel bir içerik yönetim sistemi (CMS) ve gelişmiş ziyaretçi analiz paneline sahip full-stack web uygulaması.</p>
@@ -562,12 +678,12 @@
                     <span class="tag">Web App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Medipro-NihonKohden-AED-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Medipro-NihonKohden-AED-Site" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Medipro AED GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 7: Electronic Daybook Ledger -->
-            <div class="project-card">
+            <!-- Project: Elektronik Yevmiye Defteri -->
+            <div class="project-card" data-category="desktop">
                 <h3 class="lang-tr">Elektronik Yevmiye Defteri</h3>
                 <h3 class="lang-en">Electronic Daybook Ledger</h3>
                 <p class="lang-tr">Çalışan puantajlarını, hak edişlerini, avanslarını ve kasa bakiyelerini dijitalleştirmek için harici API veya muhasebe sunucularından tamamen bağımsız çalışan, çevrimdışı öncelikli kurumsal masaüstü uygulaması.</p>
@@ -579,12 +695,12 @@
                     <span class="tag">Desktop App</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Elektronik-Yevmiye-Defteri" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Elektronik-Yevmiye-Defteri" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Yevmiye Defteri GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 8: Power Pilot -->
-            <div class="project-card">
+            <!-- Project: Power Pilot -->
+            <div class="project-card" data-category="desktop">
                 <h3 class="lang-tr">Power Pilot</h3>
                 <h3 class="lang-en">Power Pilot</h3>
                 <p class="lang-tr">Windows işletim sisteminde planlanmış zamanlayıcılar ve özel geri sayım ön ayarları kullanarak kapatma, yeniden başlatma ve uyku gibi güç durumlarını otomatikleştiren, Electron tabanlı hafif masaüstü uygulaması.</p>
@@ -596,12 +712,12 @@
                     <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Power-Pilot" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Power-Pilot" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Power Pilot GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 9: Medipro 2026 Kart -->
-            <div class="project-card">
+            <!-- Project: Medipro 2026 Kart -->
+            <div class="project-card" data-category="medical web">
                 <h3 class="lang-tr">Medipro 2026 Yılbaşı Kartı</h3>
                 <h3 class="lang-en">Medipro 2026 Card</h3>
                 <p class="lang-tr">Medipro ailesi için özel olarak tasarlanmış, güzel bir tatil teması, özel mesajlar ve tam ekran kutlama videosuna yumuşak geçişler içeren premium, etkileşimli ve görsel olarak çarpıcı web kartı.</p>
@@ -613,12 +729,12 @@
                     <span class="tag">Premium UI</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Medipro-2026-Kart" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Medipro-2026-Kart" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Medipro 2026 Kart GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 10: Dental Health Tracking App -->
-            <div class="project-card">
+            <!-- Project: Dental Health Tracking App -->
+            <div class="project-card" data-category="medical web">
                 <h3 class="lang-tr">Ağız ve Diş Sağlığı Takip Uygulaması</h3>
                 <h3 class="lang-en">Dental Health Tracking App</h3>
                 <p class="lang-tr">Hasta dosyası yönetimi, randevu planlama ve kişisel ağız hijyeni takibi için hastalar, diş hekimleri ve klinik asistanlarına özel yetkilendirme katmanları sunan kapsamlı full-stack web uygulaması.</p>
@@ -630,12 +746,12 @@
                     <span class="tag">Clinic Management</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Oral-and-Dental-Health-Tracking-Application" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Oral-and-Dental-Health-Tracking-Application" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Diş Sağlığı Takip GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 11: AA News Crawler -->
-            <div class="project-card">
+            <!-- Project: AA News Crawler -->
+            <div class="project-card" data-category="ai">
                 <h3 class="lang-tr">AA Haber Crawler – Veri Madenciliği</h3>
                 <h3 class="lang-en">AA News Crawler – Data Mining</h3>
                 <p class="lang-tr">Belirlenen ID aralıklarındaki haber makalelerini (başlıklar, özetler, tam metinler, kategoriler, diller ve yüksek kaliteli resimler) Anadolu Ajansı portalından çekmek için Python ile yazılmış otomatik veri madenciliği aracı.</p>
@@ -647,12 +763,12 @@
                     <span class="tag">BeautifulSoup</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/AANewsCrawler-DataMining" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/AANewsCrawler-DataMining" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="AA News Crawler GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 12: ML Classification Pipeline -->
-            <div class="project-card">
+            <!-- Project: ML Classification Pipeline -->
+            <div class="project-card" data-category="ai">
                 <h3 class="lang-tr">Makine Öğrenmesi Sınıflandırma Pipeline'ı</h3>
                 <h3 class="lang-en">ML Classification Pipeline</h3>
                 <p class="lang-tr">Metin sınıflandırma görevleri için TF-IDF vektörleştirme ve en iyi hiperparametre kombinasyonlarını bulmak amacıyla Scikit-Learn Grid Search kullanan, en iyi modelleri otomatik kaydeden uçtan uca Python makine öğrenmesi hattı.</p>
@@ -664,12 +780,12 @@
                     <span class="tag">Text Classification</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/ML-Pipeline-TextClassification" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/ML-Pipeline-TextClassification" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="ML Pipeline GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 13: Sentiment Analysis Preprocessing -->
-            <div class="project-card">
+            <!-- Project: Sentiment Analysis Preprocessing -->
+            <div class="project-card" data-category="ai">
                 <h3 class="lang-tr">Duygu Analizi Ön İşleme Sistemi</h3>
                 <h3 class="lang-en">Sentiment Analysis Preprocessing</h3>
                 <p class="lang-tr">Ham JSON veri kümelerini temizlemek, filtrelemek, dillere göre ayırmak ve anahtar kelime eşleştirmeli duygu sınıflandırması yapmak için tasarlanmış Python tabanlı kapsamlı veri madenciliği hattı.</p>
@@ -681,12 +797,12 @@
                     <span class="tag">Data Mining</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Preprocessing-Sentiment-Analysis-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Preprocessing-Sentiment-Analysis-System" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Sentiment Analysis GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 14: Wine Quality Prediction KNNR SVR -->
-            <div class="project-card">
+            <!-- Project: Wine Quality Prediction KNNR SVR -->
+            <div class="project-card" data-category="ai">
                 <h3 class="lang-tr">Beyaz Şarap Kalitesi Tahmini</h3>
                 <h3 class="lang-en">Wine Quality Prediction (KNNR/SVR)</h3>
                 <p class="lang-tr">Kimyasal özelliklerine göre beyaz şarap kalitesini tahmin etmek amacıyla K-En Yakın Komşu Regresyonu (KNNR) ve Destek Vektör Regresyonu (SVR) modellerini eğiten ve karşılaştıran veri bilimi projesi.</p>
@@ -698,12 +814,12 @@
                     <span class="tag">Data Science</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Wine-Quality-Prediction-KNNR-SVR" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Wine-Quality-Prediction-KNNR-SVR" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Wine Quality GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 15: Basic OS -->
-            <div class="project-card">
+            <!-- Project: Basic OS -->
+            <div class="project-card" data-category="desktop">
                 <h3 class="lang-tr">Temel İşletim Sistemi (Basic OS)</h3>
                 <h3 class="lang-en">Basic Operating System</h3>
                 <p class="lang-tr">Özel bir önyükleyici (bootloader) ve komut satırı arayüzü çekirdeğinden (kernel) oluşan, donanım kontrolü ve bellek eşleme temellerini gösteren Assembly dilinde yazılmış 16-bit gerçek mod işletim sistemi.</p>
@@ -715,12 +831,12 @@
                     <span class="tag">16-Bit</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Basic-Operating-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Basic-Operating-System" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Basic OS GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
 
-            <!-- Project 16: Personal Web Site -->
-            <div class="project-card">
+            <!-- Project: Personal Web Site -->
+            <div class="project-card" data-category="web">
                 <h3 class="lang-tr">Kişisel Web Sitesi</h3>
                 <h3 class="lang-en">Personal Web Site</h3>
                 <p class="lang-tr">Yazılım projelerini, teknik becerileri ve akademik başarıları sergilemek için modern, son derece etkileşimli, özel koyu gül temalı ve hızlı istemci taraflı performans odaklı kişisel portföy web sitesi.</p>
@@ -732,13 +848,13 @@
                     <span class="tag">Portfolio</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Personal-Web-Site" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://emirtdede.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/emirtdede/Personal-Web-Site" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="Portfolio GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://emirtdede.vercel.app/" target="_blank" rel="noopener noreferrer" title="Canlı Demo" aria-label="Portfolio Canlı Demo"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
-            <!-- Project 17: Medipro Electronic Signature -->
-            <div class="project-card">
+            <!-- Project: Medipro Electronic Signature -->
+            <div class="project-card" data-category="medical web">
                 <h3 class="lang-tr">Medipro Kurumsal E-Posta İmzası</h3>
                 <h3 class="lang-en">Medipro Electronic Signature</h3>
                 <p class="lang-tr">Tüm popüler e-posta istemcilerinde (Outlook, Gmail, iOS Mail vb.) tutarlı ve sorunsuz görüntülenecek şekilde yüksek uyumlulukla tasarlanmış kurumsal HTML e-posta imzası şablonu.</p>
@@ -750,9 +866,16 @@
                     <span class="tag">Compatibility</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/emirtdede/Medipro-Electronic-Signature" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/emirtdede/Medipro-Electronic-Signature" target="_blank" rel="noopener noreferrer" title="GitHub Deposu" aria-label="E-posta İmzası GitHub"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
+        </div>
+
+        <!-- Empty search result state -->
+        <div id="projects-empty" class="projects-empty" style="display: none;">
+            <i class='bx bx-search-alt'></i>
+            <p class="lang-tr">Aramanızla eşleşen proje bulunamadı.</p>
+            <p class="lang-en">No projects found matching your search query.</p>
         </div>
     </section>
 
@@ -764,14 +887,14 @@
             <span class="animate scroll" style="--i:1;"></span>
         </h2>
         
-        <form action="https://formspree.io/f/xvznwqeb" method="POST">
+        <form action="https://formspree.io/f/xvznwqeb" method="POST" aria-label="İletişim Formu">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" id="form-name" name="name" placeholder="Full Name" required>
+                    <input type="text" id="form-name" name="name" placeholder="Full Name" autocomplete="name" aria-label="Ad Soyad / Full Name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="email" id="form-email" name="email" placeholder="Email Address" required>
+                    <input type="email" id="form-email" name="email" placeholder="Email Address" autocomplete="email" aria-label="E-posta Adresi / Email Address" required>
                     <span class="focus"></span>
                 </div>
 
@@ -780,11 +903,11 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" id="form-phone" name="phone" placeholder="Mobile Number" required>
+                    <input type="tel" id="form-phone" name="phone" placeholder="Mobile Number" autocomplete="tel" aria-label="Telefon Numarası / Mobile Number" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" id="form-subject" name="subject" placeholder="Email Subject" required>
+                    <input type="text" id="form-subject" name="subject" placeholder="Email Subject" aria-label="Konu / Subject" required>
                     <span class="focus"></span>
                 </div>
 
@@ -792,7 +915,7 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="message" id="form-message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="form-message" cols="30" rows="10" placeholder="Your Message" aria-label="Mesajınız / Your Message" required></textarea>
                 <span class="focus"></span>
                 <span class="animate scroll" style="--i:5;"></span>
             </div>
@@ -803,16 +926,16 @@
                     <span class="lang-tr" id="file-label-text-tr">Dosya Ekle (İsteğe Bağlı)</span>
                     <span class="lang-en" id="file-label-text-en">Attach File (Optional)</span>
                 </label>
-                <input type="file" id="form-file" name="attachment" style="display: none;">
+                <input type="file" id="form-file" name="attachment" style="display: none;" aria-label="Dosya Ekle">
                 <div id="file-upload-info" class="file-upload-info" style="display: none;">
                     <span id="file-name"></span>
-                    <button type="button" id="remove-file-btn"><i class='bx bx-trash'></i></button>
+                    <button type="button" id="remove-file-btn" aria-label="Dosyayı Kaldır"><i class='bx bx-trash'></i></button>
                 </div>
                 <span class="animate scroll" style="--i:5.5;"></span>
             </div>
 
             <div class="btn-box btns">
-                <button type="submit" class="btn">
+                <button type="submit" class="btn" aria-label="Mesajı Gönder">
                     <span class="lang-tr">Gönder</span>
                     <span class="lang-en">Submit</span>
                 </button>
@@ -830,7 +953,7 @@
         </div>
 
         <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#home" aria-label="Sayfa Başına Dön"><i class='bx bx-up-arrow-alt'></i></a>
         
             <span class="animate scroll" style="--i:3;"></span>
         </div>
@@ -838,7 +961,7 @@
 
 
     <!-- Custom Alert Modal -->
-    <div id="custom-alert" class="custom-alert-overlay">
+    <div id="custom-alert" class="custom-alert-overlay" role="dialog" aria-modal="true" aria-labelledby="custom-alert-title">
         <div class="custom-alert-box" id="custom-alert-box">
             <div class="custom-alert-icon">
                 <i class='bx bx-check-circle' id="alert-icon-success"></i>
@@ -849,14 +972,14 @@
                 <span class="lang-en" id="alert-title-en">Success!</span>
             </h3>
             <p id="custom-alert-message">Mesajınız başarıyla gönderildi!</p>
-            <button id="custom-alert-btn" class="alert-btn">
+            <button id="custom-alert-btn" class="alert-btn" aria-label="Uyarıyı Kapat">
                 <span class="lang-tr">Tamam</span>
                 <span class="lang-en">OK</span>
             </button>
         </div>
     </div>
 
-    <script src="js/script.js?v=spotlight-3"></script>
+    <script src="js/script.js?v=spotlight-4"></script>
 </body>
 
 </html>

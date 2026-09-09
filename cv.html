@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emir Dede - CV / Resume</title>
+    <meta name="description" content="Emir Dede - BT Çözüm ve Entegrasyon Uzmanı Özgeçmişi (CV / Resume).">
+    <link rel="icon" href="public/favicon.ico" sizes="any">
+    <link rel="icon" href="public/icon-192.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #1e1717;
+            --card-bg: #2d2020;
+            --card-border: #4a3434;
+            --text-color: #f1eded;
+            --text-muted: #bda9a9;
+            --main-color: #cc9595;
+            --accent-color: #e2b4b4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 4rem;
+        }
+
+        /* Toolbar */
+        .cv-toolbar {
+            position: sticky;
+            top: 0;
+            background: rgba(30, 23, 23, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--card-border);
+            z-index: 1000;
+        }
+
+        .cv-toolbar .brand {
+            font-weight: 700;
+            color: var(--main-color);
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cv-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid var(--main-color);
+        }
+
+        .btn-action.primary {
+            background: var(--main-color);
+            color: #1e1717;
+        }
+
+        .btn-action.primary:hover {
+            background: var(--accent-color);
+        }
+
+        .btn-action.secondary {
+            background: transparent;
+            color: var(--text-color);
+        }
+
+        .btn-action.secondary:hover {
+            background: rgba(204, 149, 149, 0.15);
+        }
+
+        /* Container */
+        .cv-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+
+        /* Header */
+        .cv-header {
+            border-bottom: 2px solid var(--card-border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cv-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+        }
+
+        .cv-header h2 {
+            font-size: 1.25rem;
+            color: var(--main-color);
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        .cv-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .cv-contact a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .cv-contact a:hover {
+            color: var(--main-color);
+        }
+
+        /* Sections */
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h3 {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item strong {
+            color: var(--main-color);
+        }
+
+        /* Timeline / Experience */
+        .timeline-item {
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .timeline-company {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: rgba(204, 149, 149, 0.12);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .timeline-body {
+            margin-top: 0.5rem;
+            font-size: 0.92rem;
+            color: #ded0d0;
+        }
+
+        .timeline-body ul {
+            padding-left: 1.25rem;
+            margin-top: 0.4rem;
+        }
+
+        .timeline-body li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Skills tags */
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            background: rgba(204, 149, 149, 0.15);
+            color: var(--text-color);
+            border: 1px solid var(--card-border);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+        }
+
+        /* Language Toggle Logic */
+        html[lang="tr"] .lang-en { display: none !important; }
+        html[lang="en"] .lang-tr { display: none !important; }
+
+        /* Print Mode */
+        @media print {
+            .cv-toolbar { display: none !important; }
+            body {
+                background: white !important;
+                color: #111 !important;
+                padding: 0 !important;
+            }
+            .cv-container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                border: none !important;
+                padding: 1.5cm !important;
+                box-shadow: none !important;
+                background: white !important;
+            }
+            .cv-header h1 { color: #000 !important; font-size: 2rem !important; }
+            .cv-header h2 { color: #555 !important; }
+            .cv-section h3 { color: #111 !important; border-bottom: 2px solid #ccc !important; }
+            .timeline-title { color: #111 !important; }
+            .timeline-company { color: #444 !important; font-weight: bold; }
+            .timeline-date { color: #666 !important; background: #eee !important; }
+            .timeline-body { color: #333 !important; }
+            .badge { background: #f0f0f0 !important; color: #111 !important; border: 1px solid #ccc !important; }
+            .cv-contact, .cv-contact a { color: #444 !important; }
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            .cv-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cv-toolbar">
+        <a href="index.html" class="brand">
+            <i class='bx bx-arrow-back'></i>
+            <span class="lang-tr">Portföye Dön</span>
+            <span class="lang-en">Back to Portfolio</span>
+        </a>
+        <div class="cv-actions">
+            <button class="btn-action secondary" id="lang-btn">
+                <i class='bx bx-world'></i>
+                <span class="lang-tr">English</span>
+                <span class="lang-en">Türkçe</span>
+            </button>
+            <button class="btn-action primary" onclick="window.print()">
+                <i class='bx bx-printer'></i>
+                <span class="lang-tr">Yazdır / PDF İndir</span>
+                <span class="lang-en">Print / Save PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="cv-container">
+        <!-- Header -->
+        <header class="cv-header">
+            <h1>Emir DEDE</h1>
+            <h2>
+                <span class="lang-tr">BT Çözüm ve Entegrasyon Uzmanı</span>
+                <span class="lang-en">IT Solution & Integration Specialist</span>
+            </h2>
+            <div class="cv-contact">
+                <span><i class='bx bx-map'></i> Ümraniye, İstanbul, TR</span>
+                <span><i class='bx bx-envelope'></i> emirtdede@gmail.com</span>
+                <a href="https://emirtdede.vercel.app" target="_blank" rel="noopener noreferrer"><i class='bx bx-globe'></i> emirtdede.com</a>
+                <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i> linkedin.com/in/emirtdede</a>
+                <a href="https://github.com/emirtdede" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> github.com/emirtdede</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="cv-section">
+            <h3>
+                <i class='bx bx-user'></i>
+                <span class="lang-tr">Özet Profil</span>
+                <span class="lang-en">Professional Summary</span>
+            </h3>
+            <p class="lang-tr">
+                Hastane altyapıları içerisinde klinik izleme ve tanı sistemlerinin entegrasyonu konusunda deneyimli Sağlık Bilişimi ve Medikal Cihaz Entegrasyon Uzmanı. Hasta başı monitörler ve tanı cihazları (ECG, EEG, EMG, AED, Defibrilatör) ile hastane platformları (HIS, ICU CIS, PACS, VNA) arasında birlikte çalışabilirlik standartları (HL7, DICOM) kullanarak sistem entegrasyonları gerçekleştirme konusunda uzman. Klinik veri akışının sürekliliğini sağlamak amacıyla mikroservis tabanlı ara katman çözümleri geliştirme, veritabanı bağlantılarını yönetme ve sağlık sistemleri arasında güvenilir veri iletişimini sağlama konularında kanıtlanmış deneyim sahibidir.
+            </p>
+            <p class="lang-en">
+                Healthcare IT & Medical Device Integration Specialist experienced in integrating clinical monitoring and diagnostic systems within hospital infrastructures. Skilled in connecting bedside monitors and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with hospital platforms such as HIS, ICU CIS, PACS, and VNA using interoperability standards (HL7, DICOM) and custom middleware. Experienced in designing microservice-based solutions, optimizing database connectivity, and maintaining reliable clinical data flow across healthcare networks.
+            </p>
+        </section>
+
+        <!-- Key Information -->
+        <section class="cv-section">
+            <h3>
+                <i class='bx bx-info-circle'></i>
+                <span class="lang-tr">Genel Bilgiler</span>
+                <span class="lang-en">Personal Details</span>
+            </h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Doğum Tarihi:</strong> 14 Temmuz 2001 (Yaş: 24)</span>
+                    <span class="lang-en"><strong>Date of Birth:</strong> 14 July 2001 (Age: 24)</span>
+                </div>
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Diller:</strong> Türkçe (Ana dil), İngilizce (B2)</span>
+                    <span class="lang-en"><strong>Languages:</strong> Turkish (Native), English (B2)</span>
+                </div>
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Askerlik Durumu:</strong> Tecilli (2027)</span>
+                    <span class="lang-en"><strong>Military Service:</strong> Postponed (2027)</span>
+                </div>
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Sürücü Belgesi:</strong> B Sınıfı (Aktif)</span>
+                    <span class="lang-en"><strong>Driving License:</strong> Category B (Active)</span>
+                </div>
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Başlama Durumu:</strong> Derhal başlayabilir</span>
+                    <span class="lang-en"><strong>Availability:</strong> Immediately available</span>
+                </div>
+                <div class="info-item">
+                    <span class="lang-tr"><strong>Çalışma Şekli:</strong> Hibrit, Yerinde veya Uzaktan</span>
+                    <span class="lang-en"><strong>Work Mode:</strong> Hybrid, On-site, or Remote</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="cv-section">
+            <h3>
+                <i class='bx bx-briefcase'></i>
+                <span class="lang-tr">İş Deneyimi</span>
+                <span class="lang-en">Work Experience</span>
+            </h3>
+
+            <!-- Medipro -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">BT Çözüm ve Entegrasyon Uzmanı</span>
+                            <span class="lang-en">IT Solution & Integration Specialist</span>
+                        </div>
+                        <div class="timeline-company">Medipro İç ve Dış Tic. Ltd. Şti. &bull; İstanbul, TR</div>
+                    </div>
+                    <div class="timeline-date">07/2025 – 03/2026</div>
+                </div>
+                <div class="timeline-body">
+                    <ul class="lang-tr">
+                        <li>Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla medikal cihazın</strong> uçtan uca entegrasyonunu gerçekleştirdim (HBYS/HIS, PACS, VNA).</li>
+                        <li>Hasta başı monitörler, merkezi izleme sistemleri ve tanı cihazlarını (ECG, EEG, EMG, AED, Defibrilatör) hastane platformlarına entegre ettim.</li>
+                        <li>Cihazların yerleşik entegrasyonlarının yetersiz olduğu durumlarda veri dönüşümü ve yönlendirmesi için mikroservis tabanlı ara katman çözümleri geliştirdim.</li>
+                        <li>Klinik sistemler için güvenli hastane ağ altyapısı (firewall, VPN, güvenli iletişim kanalları) yapılandırdım ve veri yedekleme süreçlerini yönettim.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Delivered end-to-end integration of <strong>1000+ medical devices across 100+ hospitals</strong> in Türkiye, connecting clinical systems with HIS, PACS, and VNA.</li>
+                        <li>Integrated bedside monitors, central monitoring units, and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with core hospital platforms.</li>
+                        <li>Developed microservice-based middleware solutions for data transformation and routing when native integrations were unavailable.</li>
+                        <li>Configured hospital network security (firewalls, VPNs) and managed system backup, archive, and operational stabilization workflows.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TRtek -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">Yazılım ve Sistem Stajyeri</span>
+                            <span class="lang-en">Software & Systems Intern</span>
+                        </div>
+                        <div class="timeline-company">TRtek MEDICAL SOFTWARE &bull; Kocaeli, TR</div>
+                    </div>
+                    <div class="timeline-date">07/2025 – 09/2025</div>
+                </div>
+                <div class="timeline-body">
+                    <ul class="lang-tr">
+                        <li>C# ve ASP.NET Core MVC kullanarak modüler uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanları geliştirdim.</li>
+                        <li>Entity Framework Core, rol tabanlı yetkilendirme ve Clean Code / SOLID prensipleri ile kurumsal yazılım mimarisine katkı sağladım.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Developed modular application components using C# and ASP.NET Core MVC, designing relational databases via SQL Server and EF Core.</li>
+                        <li>Implemented authentication, user management, and followed Clean Code and SOLID principles in a medical software environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- OKU -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">BT Stajyeri (Bilgi İşlem Daire Bşk.)</span>
+                            <span class="lang-en">IT Intern (IT Department)</span>
+                        </div>
+                        <div class="timeline-company">Osmaniye Korkut Ata Üniversitesi &bull; Osmaniye, TR</div>
+                    </div>
+                    <div class="timeline-date">03/2025 – 06/2025</div>
+                </div>
+                <div class="timeline-body">
+                    <ul class="lang-tr">
+                        <li>Donanım/yazılım bakım işlemleri, ağ altyapısının kurulumu, sunucu operasyonları ve son kullanıcı destek süreçlerinde görev aldım.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Supported institutional IT operations, hardware/software maintenance, network configuration, and help desk troubleshooting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TUBITAK -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">Araştırma Stajyeri</span>
+                            <span class="lang-en">Research Intern</span>
+                        </div>
+                        <div class="timeline-company">Çukurova Üniversitesi & TÜBİTAK &bull; Adana, TR</div>
+                    </div>
+                    <div class="timeline-date">03/2023 – 10/2023</div>
+                </div>
+                <div class="timeline-body">
+                    <ul class="lang-tr">
+                        <li>Horseshoe Adası jeokronolojik araştırma projesinde veri analizi, filtreleme ve görselleştirme süreçlerinde yer aldım.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Assisted in geochronological data processing, visual evaluation of dating datasets, and scientific reporting in a TUBITAK-funded research project.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+            <h3>
+                <i class='bx bx-book-open'></i>
+                <span class="lang-tr">Eğitim</span>
+                <span class="lang-en">Education</span>
+            </h3>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">Bilgisayar Mühendisliği Lisans</span>
+                            <span class="lang-en">Bachelor of Computer Engineering</span>
+                        </div>
+                        <div class="timeline-company">Osmaniye Korkut Ata Üniversitesi</div>
+                    </div>
+                    <div class="timeline-date">2021 – 2025</div>
+                </div>
+                <div class="timeline-body">
+                    <p class="lang-tr">GPA: <strong>2.91 / 4.00</strong> &bull; Yazılım mühendisliği, veri bilimi, yapay zekâ temelleri ve medikal bilişim sistemleri.</p>
+                    <p class="lang-en">GPA: <strong>2.91 / 4.00</strong> &bull; Core focus on software engineering, data structures, AI fundamentals, and healthcare IT.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="cv-section">
+            <h3>
+                <i class='bx bx-wrench'></i>
+                <span class="lang-tr">Teknik Yetkinlikler</span>
+                <span class="lang-en">Core Competencies</span>
+            </h3>
+            <div class="badge-list">
+                <span class="badge">HL7 (Health Level 7)</span>
+                <span class="badge">DICOM</span>
+                <span class="badge">PACS / VNA / HIS / ICU CIS</span>
+                <span class="badge">Medikal Cihaz Entegrasyonu</span>
+                <span class="badge">Python</span>
+                <span class="badge">C# / ASP.NET Core MVC</span>
+                <span class="badge">Entity Framework Core</span>
+                <span class="badge">SQL Server / Oracle SQL</span>
+                <span class="badge">VMware / Hyper-V</span>
+                <span class="badge">Mikroservisler</span>
+                <span class="badge">Ağ ve Güvenlik (VPN / Firewall)</span>
+                <span class="badge">JavaScript / HTML5 / CSS3</span>
+                <span class="badge">Git / GitHub CI/CD</span>
+                <span class="badge">Electron</span>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const langBtn = document.getElementById('lang-btn');
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        langBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('lang') || 'tr';
+            setLanguage(current === 'tr' ? 'en' : 'tr');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('preferred-language') || 'tr';
+            setLanguage(saved);
+        });
+    </script>
+</body>
+</html>

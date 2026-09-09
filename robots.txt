@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emirtdede.vercel.app/sitemap.xml

@@ -1,56 +1,101 @@
-// toggle icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// ==========================================
+// Emir Dede Personal Portfolio — Core Scripts
+// ==========================================
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+// --- Navigation & Mobile Menu ---
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+
+if (menuIcon && navbar) {
+    const toggleMenu = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    };
+
+    menuIcon.addEventListener('click', toggleMenu);
+    menuIcon.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
 }
 
-// scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+// Close mobile navbar when clicking any nav link
+document.querySelectorAll('header nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (menuIcon) menuIcon.classList.remove('bx-x');
+        if (navbar) navbar.classList.remove('active');
+    });
+});
 
-window.onscroll = () => {
+// --- Modern Scroll & Section Observer ---
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+
+// High-performance IntersectionObserver for section animations and scroll-spy
+function checkAllSectionsInView() {
     sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 100;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            // active navbar links
-            navLinks.forEach(links=> {
-                links.classList.remove('active');
-                const activeLink = document.querySelector('header nav a[href*=' + id + ']');
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-            }); 
-            // active sections for animation on scroll
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
             sec.classList.add('show-animate');
         }
-        // if want to use animation that repeats on scroll use this
-        // else {
-        //     sec.classList.remove('show-animate');
-        // }
+    });
+}
+
+if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-animate');
+                const id = entry.target.getAttribute('id');
+                if (id) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
     });
 
-
-    // sticky header
-    let header = document.querySelector('header');
-
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    // remove toggle icon and navbar when click navbar links (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-
-    // animation footer on scroll
-    let footer = document.querySelector('footer');
-
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    sections.forEach(sec => sectionObserver.observe(sec));
 }
+
+// Immediate check on load and hash jump
+checkAllSectionsInView();
+window.addEventListener('hashchange', checkAllSectionsInView);
+
+// Lightweight RAF scroll handler for sticky header & footer
+let isScrolling = false;
+window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+
+            // Sticky Header
+            if (header) {
+                header.classList.toggle('sticky', scrollY > 80);
+            }
+
+            // Footer animation
+            if (footer) {
+                const atBottom = window.innerHeight + scrollY >= document.scrollingElement.scrollHeight - 100;
+                footer.classList.toggle('show-animate', atBottom);
+            }
+
+            isScrolling = false;
+        });
+        isScrolling = true;
+    }
+}, { passive: true });
 
 // --- Language Switcher Logic ---
 const langToggle = document.getElementById('lang-toggle');
@@ -59,21 +104,23 @@ function setLanguage(lang) {
     document.documentElement.setAttribute('lang', lang);
     localStorage.setItem('preferred-language', lang);
     
-    // Update input placeholders dynamically based on language
+    // Dynamic Form & Search Placeholders
     const placeholders = {
         tr: {
             name: "Ad Soyad",
             email: "E-posta Adresi",
             phone: "Telefon Numarası",
             subject: "E-posta Konusu",
-            message: "Mesajınız"
+            message: "Mesajınız",
+            search: "Proje veya teknoloji ara..."
         },
         en: {
             name: "Full Name",
             email: "Email Address",
             phone: "Mobile Number",
             subject: "Email Subject",
-            message: "Your Message"
+            message: "Your Message",
+            search: "Search projects or tech..."
         }
     };
 
@@ -82,23 +129,115 @@ function setLanguage(lang) {
     const phoneInput = document.getElementById('form-phone');
     const subjectInput = document.getElementById('form-subject');
     const messageInput = document.getElementById('form-message');
+    const searchInput = document.getElementById('project-search');
 
     if (nameInput) nameInput.placeholder = placeholders[lang].name;
     if (emailInput) emailInput.placeholder = placeholders[lang].email;
     if (phoneInput) phoneInput.placeholder = placeholders[lang].phone;
     if (subjectInput) subjectInput.placeholder = placeholders[lang].subject;
     if (messageInput) messageInput.placeholder = placeholders[lang].message;
+    if (searchInput) searchInput.placeholder = placeholders[lang].search;
 }
 
-// Event Listeners for language toggle
 if (langToggle) {
-    langToggle.addEventListener('click', () => {
+    const handleToggle = () => {
         const currentLang = document.documentElement.getAttribute('lang') || 'tr';
         const newLang = currentLang === 'tr' ? 'en' : 'tr';
         setLanguage(newLang);
+    };
+
+    langToggle.addEventListener('click', handleToggle);
+    langToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleToggle();
+        }
     });
 }
 
+// --- Project Filtering & Dynamic Search ---
+function initProjectFilterAndSearch() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const searchInput = document.getElementById('project-search');
+    const projectCards = document.querySelectorAll('.project-card');
+    const emptyState = document.getElementById('projects-empty');
+
+    if (!projectCards.length) return;
+
+    // Dynamically calculate and update counts in badge pills
+    filterButtons.forEach(btn => {
+        const filter = btn.dataset.filter;
+        const countSpan = btn.querySelector('.filter-count');
+        if (countSpan) {
+            if (filter === 'all') {
+                countSpan.textContent = projectCards.length;
+            } else {
+                let count = 0;
+                projectCards.forEach(card => {
+                    const categories = (card.dataset.category || '').split(' ');
+                    if (categories.includes(filter)) count++;
+                });
+                countSpan.textContent = count;
+            }
+        }
+    });
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    const applyFilterAndSearch = () => {
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+            const categories = (card.dataset.category || '').split(' ');
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesCategory = (currentFilter === 'all') || categories.includes(currentFilter);
+            const matchesSearch = (!searchQuery) || cardText.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+                card.classList.remove('is-hidden');
+                card.classList.add('is-visible');
+                visibleCount++;
+            } else {
+                card.classList.add('is-hidden');
+                card.classList.remove('is-visible');
+            }
+        });
+
+        if (emptyState) {
+            emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    };
+
+    // Filter button click events
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            currentFilter = btn.dataset.filter || 'all';
+            applyFilterAndSearch();
+        });
+    });
+
+    // Search input event with debounce
+    if (searchInput) {
+        let debounceTimer;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                searchQuery = e.target.value.trim().toLowerCase();
+                applyFilterAndSearch();
+            }, 120);
+        });
+    }
+}
+
+// --- Interactive Hero Spotlight Reveal Effect ---
 function initSpotlightReveal() {
     const revealers = document.querySelectorAll('.spotlight-reveal');
 
@@ -161,31 +300,6 @@ function initSpotlightReveal() {
     });
 }
 
-// Load saved language on startup
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferred-language') || 'tr';
-    setLanguage(savedLang);
-    initSpotlightReveal();
-    
-    // Set dynamic year
-    const yearEl = document.getElementById('current-year');
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
-
-    // Set dynamic age (Born 14 July 2001)
-    const birthDate = new Date('2001-07-14');
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    document.querySelectorAll('.calculated-age').forEach(el => {
-        el.textContent = age;
-    });
-});
-
 // --- Custom Alert Helper ---
 function showCustomAlert(type, message) {
     const alertOverlay = document.getElementById('custom-alert');
@@ -225,15 +339,20 @@ if (closeAlertBtn && alertOverlay) {
         alertOverlay.classList.remove('show');
     });
 
-    // Close on clicking outside the alert box
     alertOverlay.addEventListener('click', (e) => {
         if (e.target === alertOverlay) {
             alertOverlay.classList.remove('show');
         }
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && alertOverlay.classList.contains('show')) {
+            alertOverlay.classList.remove('show');
+        }
+    });
 }
 
-// File Input Event Handlers
+// --- File Upload & Form Validation ---
 const fileInput = document.getElementById('form-file');
 const fileUploadInfo = document.getElementById('file-upload-info');
 const fileNameSpan = document.getElementById('file-name');
@@ -242,7 +361,7 @@ const fileLabelTextTr = document.getElementById('file-label-text-tr');
 const fileLabelTextEn = document.getElementById('file-label-text-en');
 
 if (fileInput && fileUploadInfo && fileNameSpan) {
-    fileInput.addEventListener('change', (e) => {
+    fileInput.addEventListener('change', () => {
         if (fileInput.files.length > 0) {
             const file = fileInput.files[0];
             const maxSizeBytes = 10 * 1024 * 1024; // 10MB limit
@@ -255,7 +374,6 @@ if (fileInput && fileUploadInfo && fileNameSpan) {
                 const currentLang = document.documentElement.getAttribute('lang') || 'tr';
                 showCustomAlert('error', sizeErrorMessages[currentLang]);
                 
-                // Clear the input selection
                 fileInput.value = '';
                 fileUploadInfo.style.display = 'none';
                 if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosya Ekle (İsteğe Bağlı)';
@@ -284,7 +402,7 @@ if (removeFileBtn && fileInput && fileUploadInfo) {
     });
 }
 
-// Contact Form Submission Handler
+// --- Contact Form Submission Handler (AJAX) ---
 const contactForm = document.querySelector('.contact form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -292,7 +410,14 @@ if (contactForm) {
         
         const data = new FormData(contactForm);
         const currentLang = document.documentElement.getAttribute('lang') || 'tr';
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
         
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+        }
+
         fetch(contactForm.action, {
             method: 'POST',
             body: data,
@@ -317,12 +442,44 @@ if (contactForm) {
                 };
                 showCustomAlert('error', errorMessages[currentLang]);
             }
-        }).catch(error => {
+        }).catch(() => {
             const errorMessages = {
                 tr: "Bağlantı hatası oluştu. Lütfen internet bağlantınızı kontrol edin.",
                 en: "A connection error occurred. Please check your internet connection."
             };
             showCustomAlert('error', errorMessages[currentLang]);
+        }).finally(() => {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.innerHTML = originalText;
+            }
         });
     });
 }
+
+// --- Initialize on DOMContentLoaded ---
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred-language') || 'tr';
+    setLanguage(savedLang);
+    initSpotlightReveal();
+    initProjectFilterAndSearch();
+    
+    // Dynamic year
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Dynamic age (Born 14 July 2001)
+    const birthDate = new Date('2001-07-14');
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    document.querySelectorAll('.calculated-age').forEach(el => {
+        el.textContent = age;
+    });
+});

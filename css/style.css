@@ -1,4 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Poppins loaded via HTML preconnect for high performance */
+
+/* Accessibility Focus Rings & Skip Link */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -10rem;
+    left: 2rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 1rem 1.6rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    z-index: 99999;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: top 0.25s ease;
+}
+
+.skip-link:focus {
+    top: 2rem;
+}
 
 * {
     margin: 0;
@@ -33,7 +62,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 2rem 5%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -51,23 +80,44 @@ body {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
+    margin-right: 2rem;
+    flex-shrink: 0;
 }
 
 .navbar {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
 }
 
 .navbar a {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 500;
-    margin-left: 3.5rem;
+    margin-left: 0;
     transition: .3s;
+    white-space: nowrap;
 }
 
 .navbar a:hover,
 .navbar a.active { 
-    color: var(--main-color)
+    color: var(--main-color);
+}
+
+.navbar .nav-cv-link {
+    border: 1.5px solid rgba(204, 149, 149, 0.45);
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-cv-link:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-color: var(--main-color);
+    box-shadow: 0 0 12px rgba(204, 149, 149, 0.4);
 }
 
 #menu-icon {
@@ -303,9 +353,11 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
 .btn-box {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
-   height: 5rem; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    width: auto;
+    max-width: 54rem;
 }
 
 .btn-box .btn {
@@ -313,18 +365,20 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 100%;
+    gap: 0.6rem;
+    padding: 0 2rem;
+    min-width: 14rem;
+    height: 4.8rem;
     background: var(--main-color);
     border: .2rem solid var(--main-color);
     border-radius: .8rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: .1rem;
     color: var(--bg-color);
     z-index: 1;
     overflow: hidden;
-    transition: .5s;
+    transition: .4s ease;
 }
 
 .btn span {
@@ -332,19 +386,36 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
 }
 
 .btn-box .btn:hover {
-    color: var(--main-color)
+    color: var(--main-color);
 }
 
-.btn-box .btn:nth-child(2) {
+.btn-box .btn.btn-outline,
+.btn-box .btn:nth-child(3) {
     background: transparent;
     color: var(--main-color);
 }
 
-.btn-box .btn:nth-child(2):hover {
-    color: var(--bg-color)
+.btn-box .btn.btn-outline:hover,
+.btn-box .btn:nth-child(3):hover {
+    color: var(--bg-color);
 }
 
-.btn-box .btn:nth-child(2)::before {
+.btn-box .btn.btn-outline::before,
+.btn-box .btn:nth-child(3)::before {
+    background: var(--main-color);
+}
+
+.btn-box .btn.btn-cv {
+    background: rgba(204, 149, 149, 0.15);
+    border-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.btn-box .btn.btn-cv:hover {
+    color: var(--bg-color);
+}
+
+.btn-box .btn.btn-cv::before {
     background: var(--main-color);
 }
 
@@ -357,7 +428,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     height: 100%;
     background: var(--bg-color);
     z-index: -1;
-    transition: .5s;
+    transition: .4s ease;
 }
 
 .btn-box .btn:hover::before {
@@ -428,7 +499,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     text-align: center;
 }
 
-span {
+.heading span {
     color: var(--main-color);
 }
 
@@ -482,8 +553,11 @@ span {
 }
 
 .btn-box.btns {
-    display: inline-block;
-    width: 15rem;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: auto;
 }
 
 .btn-box.btns a::before {
@@ -981,6 +1055,7 @@ span {
     }
 
     .navbar {
+        display: block;
         position: absolute;
         top: 100%;
         left: -100%;
@@ -1208,6 +1283,133 @@ html[lang="tr"] .lang-en {
     padding-bottom: 7rem;
 }
 
+/* Projects Filter & Search Toolbar */
+.projects-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 3.5rem auto 1.5rem;
+    max-width: 90rem;
+    width: 100%;
+}
+
+.projects-search-box {
+    position: relative;
+    width: 100%;
+    max-width: 44rem;
+}
+
+.projects-search-box i {
+    position: absolute;
+    left: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    color: var(--main-color);
+    pointer-events: none;
+}
+
+.projects-search-box input {
+    width: 100%;
+    padding: 1.2rem 1.6rem 1.2rem 4.6rem;
+    background: rgba(45, 32, 32, 0.75);
+    border: 1.5px solid rgba(204, 149, 149, 0.4);
+    border-radius: 3rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.projects-search-box input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 15px rgba(204, 149, 149, 0.35);
+    background: rgba(45, 32, 32, 0.95);
+}
+
+.projects-search-box input::placeholder {
+    color: #bda9a9;
+    font-size: 1.4rem;
+}
+
+.projects-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.8rem;
+    background: rgba(45, 32, 32, 0.6);
+    border: 1.5px solid rgba(204, 149, 149, 0.35);
+    border-radius: 2.5rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.filter-btn:hover {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    transform: translateY(-2px);
+}
+
+.filter-btn span {
+    color: inherit;
+}
+
+.filter-btn.active {
+    background: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 4px 15px rgba(204, 149, 149, 0.4);
+    font-weight: 600;
+}
+
+.filter-btn.active span {
+    color: var(--bg-color);
+}
+
+.filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.25);
+    color: inherit;
+}
+
+.filter-btn.active .filter-count {
+    background: rgba(52, 38, 38, 0.35);
+    color: var(--bg-color);
+}
+
+.projects-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.8rem;
+    color: #bda9a9;
+}
+
+.projects-empty i {
+    font-size: 4rem;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
 .projects .projects-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1217,12 +1419,33 @@ html[lang="tr"] .lang-en {
 
 .project-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     padding: 2.5rem;
     overflow: hidden;
     z-index: 1;
-    transition: .5s;
+    transition: transform 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card.is-hidden {
+    display: none !important;
+}
+
+.project-card.is-visible {
+    animation: projectFadeIn 0.35s ease forwards;
+}
+
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .project-card::before {
@@ -1251,6 +1474,7 @@ html[lang="tr"] .lang-en {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .project-card .project-tags {
