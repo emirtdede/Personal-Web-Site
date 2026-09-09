@@ -601,12 +601,14 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
 }
 
 .creed-accent {
+    display: inline-block;
     color: var(--main-color);
     font-weight: 600;
     font-style: normal;
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-color: rgba(204, 149, 149, 0.5);
+    margin-top: 0.5rem;
 }
 
 .creed-author {
