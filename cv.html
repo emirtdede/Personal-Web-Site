@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emir Dede - CV / Resume</title>
-    <meta name="description" content="Emir Dede - BT Çözüm ve Entegrasyon Uzmanı Özgeçmişi (CV / Resume).">
+    <title>Emir Dede - CV / Resume (Founder @ Vellium & IT Specialist)</title>
+    <meta name="description" content="Emir Dede - Vellium Kurucusu, BT Çözüm ve Entegrasyon Uzmanı Özgeçmişi (CV / Resume).">
     <link rel="icon" href="public/favicon.ico" sizes="any">
     <link rel="icon" href="public/icon-192.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,42 +99,42 @@
             background: rgba(204, 149, 149, 0.15);
         }
 
-        /* Container */
+        /* CV Sheet Layout */
         .cv-container {
             max-width: 900px;
-            margin: 2rem auto;
+            margin: 2.5rem auto;
+            padding: 3rem;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 12px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* Header */
         .cv-header {
             border-bottom: 2px solid var(--card-border);
-            padding-bottom: 1.5rem;
+            padding-bottom: 2rem;
             margin-bottom: 2rem;
         }
 
         .cv-header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
             color: var(--text-color);
-            letter-spacing: 0.5px;
+            letter-spacing: -0.5px;
         }
 
         .cv-header h2 {
             font-size: 1.25rem;
-            color: var(--main-color);
             font-weight: 500;
-            margin-top: 0.2rem;
+            color: var(--main-color);
+            margin-top: 0.25rem;
         }
 
         .cv-contact {
             display: flex;
             flex-wrap: wrap;
             gap: 1.2rem;
-            margin-top: 1rem;
+            margin-top: 1.2rem;
             font-size: 0.9rem;
             color: var(--text-muted);
         }
@@ -142,62 +142,66 @@
         .cv-contact a {
             color: var(--text-muted);
             text-decoration: none;
-            transition: color 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
+            transition: color 0.2s;
         }
 
         .cv-contact a:hover {
             color: var(--main-color);
         }
 
-        /* Sections */
+        .cv-contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Section Styling */
         .cv-section {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         .cv-section h3 {
-            font-size: 1.2rem;
-            color: var(--main-color);
-            border-bottom: 1px solid var(--card-border);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.15rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--main-color);
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 0.75rem 1.5rem;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item strong {
-            color: var(--main-color);
-        }
-
-        /* Timeline / Experience */
+        /* Timeline Items */
         .timeline-item {
-            margin-bottom: 1.75rem;
             position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--card-border);
+            margin-bottom: 1.8rem;
         }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--main-color);
         }
 
         .timeline-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: baseline;
             flex-wrap: wrap;
             gap: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .timeline-title {
@@ -207,94 +211,142 @@
         }
 
         .timeline-company {
-            color: var(--accent-color);
+            color: var(--main-color);
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .timeline-date {
             font-size: 0.85rem;
             color: var(--text-muted);
-            background: rgba(204, 149, 149, 0.12);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+            font-weight: 500;
         }
 
         .timeline-body {
-            margin-top: 0.5rem;
             font-size: 0.92rem;
-            color: #ded0d0;
+            color: #d1c5c5;
         }
 
         .timeline-body ul {
-            padding-left: 1.25rem;
+            padding-left: 1.2rem;
             margin-top: 0.4rem;
         }
 
         .timeline-body li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
         }
 
-        /* Skills tags */
+        /* Grid for Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
+            font-size: 0.92rem;
+        }
+
+        .info-item strong {
+            color: var(--main-color);
+        }
+
+        /* Badge List */
         .badge-list {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 0.5rem;
         }
 
         .badge {
-            background: rgba(204, 149, 149, 0.15);
-            color: var(--text-color);
-            border: 1px solid var(--card-border);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.82rem;
+            background: rgba(204, 149, 149, 0.12);
+            color: var(--accent-color);
+            border: 1px solid rgba(204, 149, 149, 0.3);
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
 
-        /* Language Toggle Logic */
-        html[lang="tr"] .lang-en { display: none !important; }
-        html[lang="en"] .lang-tr { display: none !important; }
+        /* Language Toggle Rules */
+        html[lang="en"] .lang-tr {
+            display: none !important;
+        }
 
-        /* Print Mode */
+        html[lang="tr"] .lang-en {
+            display: none !important;
+        }
+
+        /* Print Optimization */
         @media print {
-            .cv-toolbar { display: none !important; }
             body {
-                background: white !important;
-                color: #111 !important;
+                background: #ffffff !important;
+                color: #111111 !important;
                 padding: 0 !important;
             }
+
+            .cv-toolbar {
+                display: none !important;
+            }
+
             .cv-container {
                 max-width: 100% !important;
                 margin: 0 !important;
+                padding: 0 !important;
                 border: none !important;
-                padding: 1.5cm !important;
                 box-shadow: none !important;
-                background: white !important;
+                background: #ffffff !important;
             }
-            .cv-header h1 { color: #000 !important; font-size: 2rem !important; }
-            .cv-header h2 { color: #555 !important; }
-            .cv-section h3 { color: #111 !important; border-bottom: 2px solid #ccc !important; }
-            .timeline-title { color: #111 !important; }
-            .timeline-company { color: #444 !important; font-weight: bold; }
-            .timeline-date { color: #666 !important; background: #eee !important; }
-            .timeline-body { color: #333 !important; }
-            .badge { background: #f0f0f0 !important; color: #111 !important; border: 1px solid #ccc !important; }
-            .cv-contact, .cv-contact a { color: #444 !important; }
-        }
 
-        @media (max-width: 768px) {
-            .cv-container {
-                padding: 1.5rem;
-                margin: 1rem;
+            .cv-header {
+                border-bottom: 2px solid #333333 !important;
             }
+
             .cv-header h1 {
-                font-size: 1.8rem;
+                color: #111111 !important;
+            }
+
+            .cv-header h2 {
+                color: #555555 !important;
+            }
+
+            .cv-section h3 {
+                color: #222222 !important;
+                border-bottom: 1px solid #cccccc !important;
+            }
+
+            .timeline-item {
+                border-left-color: #bbbbbb !important;
+            }
+
+            .timeline-item::before {
+                background: #333333 !important;
+            }
+
+            .timeline-title {
+                color: #111111 !important;
+            }
+
+            .timeline-company {
+                color: #444444 !important;
+            }
+
+            .timeline-body {
+                color: #333333 !important;
+            }
+
+            .badge {
+                background: #f0f0f0 !important;
+                color: #222222 !important;
+                border: 1px solid #cccccc !important;
+            }
+
+            .cv-contact, .cv-contact a, .cv-contact span {
+                color: #555555 !important;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Sticky Toolbar -->
     <header class="cv-toolbar">
         <a href="index.html" class="brand">
             <i class='bx bx-arrow-back'></i>
@@ -302,12 +354,12 @@
             <span class="lang-en">Back to Portfolio</span>
         </a>
         <div class="cv-actions">
-            <button class="btn-action secondary" id="lang-btn">
-                <i class='bx bx-world'></i>
+            <button class="btn-action secondary" id="lang-btn" aria-label="Dili Değiştir / Switch Language">
+                <i class='bx bx-globe'></i>
                 <span class="lang-tr">English</span>
                 <span class="lang-en">Türkçe</span>
             </button>
-            <button class="btn-action primary" onclick="window.print()">
+            <button class="btn-action primary" onclick="window.print()" aria-label="Yazdır veya PDF İndir">
                 <i class='bx bx-printer'></i>
                 <span class="lang-tr">Yazdır / PDF İndir</span>
                 <span class="lang-en">Print / Save PDF</span>
@@ -320,13 +372,14 @@
         <header class="cv-header">
             <h1>Emir DEDE</h1>
             <h2>
-                <span class="lang-tr">BT Çözüm ve Entegrasyon Uzmanı</span>
-                <span class="lang-en">IT Solution & Integration Specialist</span>
+                <span class="lang-tr">Vellium Kurucusu &bull; BT Çözüm ve Sistem Entegrasyon Uzmanı</span>
+                <span class="lang-en">Founder @ Vellium &bull; Healthcare IT & Systems Integration Specialist</span>
             </h2>
             <div class="cv-contact">
-                <span><i class='bx bx-map'></i> Ümraniye, İstanbul, TR</span>
+                <span><i class='bx bx-map'></i> İstanbul, TR</span>
                 <span><i class='bx bx-envelope'></i> emirtdede@gmail.com</span>
-                <a href="https://emirtdede.vercel.app" target="_blank" rel="noopener noreferrer"><i class='bx bx-globe'></i> emirtdede.com</a>
+                <a href="https://vellium.dev" target="_blank" rel="noopener noreferrer"><i class='bx bx-globe'></i> vellium.dev</a>
+                <a href="https://emirtdede.vercel.app" target="_blank" rel="noopener noreferrer"><i class='bx bx-laptop'></i> emirtdede.com</a>
                 <a href="https://www.linkedin.com/in/emirtdede/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i> linkedin.com/in/emirtdede</a>
                 <a href="https://github.com/emirtdede" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> github.com/emirtdede</a>
             </div>
@@ -336,14 +389,14 @@
         <section class="cv-section">
             <h3>
                 <i class='bx bx-user'></i>
-                <span class="lang-tr">Özet Profil</span>
-                <span class="lang-en">Professional Summary</span>
+                <span class="lang-tr">Yönetici Özeti</span>
+                <span class="lang-en">Executive Summary</span>
             </h3>
             <p class="lang-tr">
-                Hastane altyapıları içerisinde klinik izleme ve tanı sistemlerinin entegrasyonu konusunda deneyimli Sağlık Bilişimi ve Medikal Cihaz Entegrasyon Uzmanı. Hasta başı monitörler ve tanı cihazları (ECG, EEG, EMG, AED, Defibrilatör) ile hastane platformları (HIS, ICU CIS, PACS, VNA) arasında birlikte çalışabilirlik standartları (HL7, DICOM) kullanarak sistem entegrasyonları gerçekleştirme konusunda uzman. Klinik veri akışının sürekliliğini sağlamak amacıyla mikroservis tabanlı ara katman çözümleri geliştirme, veritabanı bağlantılarını yönetme ve sağlık sistemleri arasında güvenilir veri iletişimini sağlama konularında kanıtlanmış deneyim sahibidir.
+                Yenilikçi dijital ürünler ve sistem yardımcıları geliştiren <strong>Vellium</strong>'un kurucusu; hastane altyapıları, yoğun bakım izleme platformları ve klinik tanı cihazlarının entegrasyonunda derin sektörel uzmanlığa sahip BT Çözüm ve Sistem Mimarı. Hasta başı monitörler, defibrilatörler ve tanı modaliteleri (ECG, EEG, EMG, AED) ile kurumsal hastane bilgi yönetim sistemleri (HBYS/HIS, ICU CIS, PACS, VNA) arasında uluslararası birlikte çalışabilirlik standartları (HL7, DICOM) temelinde yüksek güvenilirlikli entegrasyonlar gerçekleştirmektedir. Klinik veri sürekliliğini temin eden mikroservis tabanlı ara katman yazılımları, kurumsal veritabanı yönetimi ve güvenli ağ iletişim protokollerinde kanıtlanmış liderlik sahibidir.
             </p>
             <p class="lang-en">
-                Healthcare IT & Medical Device Integration Specialist experienced in integrating clinical monitoring and diagnostic systems within hospital infrastructures. Skilled in connecting bedside monitors and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with hospital platforms such as HIS, ICU CIS, PACS, and VNA using interoperability standards (HL7, DICOM) and custom middleware. Experienced in designing microservice-based solutions, optimizing database connectivity, and maintaining reliable clinical data flow across healthcare networks.
+                Founder of <strong>Vellium</strong>, an initiative focused on modern digital productivity software, and an accomplished Healthcare IT & Systems Architect with deep expertise in mission-critical hospital infrastructures. Proven track record of integrating acute-care patient monitors, central monitoring stations, and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with enterprise hospital systems (HIS, ICU CIS, PACS, VNA) via global interoperability standards (HL7, DICOM). Specialized in architecting high-availability microservice middleware, enterprise database synchronization, and reliable clinical data transport.
             </p>
         </section>
 
@@ -352,7 +405,7 @@
             <h3>
                 <i class='bx bx-info-circle'></i>
                 <span class="lang-tr">Genel Bilgiler</span>
-                <span class="lang-en">Personal Details</span>
+                <span class="lang-en">Corporate Details</span>
             </h3>
             <div class="info-grid">
                 <div class="info-item">
@@ -372,12 +425,12 @@
                     <span class="lang-en"><strong>Driving License:</strong> Category B (Active)</span>
                 </div>
                 <div class="info-item">
-                    <span class="lang-tr"><strong>Başlama Durumu:</strong> Derhal başlayabilir</span>
-                    <span class="lang-en"><strong>Availability:</strong> Immediately available</span>
+                    <span class="lang-tr"><strong>Müsaitlik:</strong> Kurumsal Proje ve İş Birliklerine Açık</span>
+                    <span class="lang-en"><strong>Availability:</strong> Open to Enterprise Projects</span>
                 </div>
                 <div class="info-item">
-                    <span class="lang-tr"><strong>Çalışma Şekli:</strong> Hibrit, Yerinde veya Uzaktan</span>
-                    <span class="lang-en"><strong>Work Mode:</strong> Hybrid, On-site, or Remote</span>
+                    <span class="lang-tr"><strong>Çalışma Modeli:</strong> Yerinde, Hibrit veya Uzaktan</span>
+                    <span class="lang-en"><strong>Work Mode:</strong> On-site, Hybrid, or Remote</span>
                 </div>
             </div>
         </section>
@@ -387,8 +440,32 @@
             <h3>
                 <i class='bx bx-briefcase'></i>
                 <span class="lang-tr">İş Deneyimi</span>
-                <span class="lang-en">Work Experience</span>
+                <span class="lang-en">Professional Experience</span>
             </h3>
+
+            <!-- Vellium -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">
+                            <span class="lang-tr">Kurucu & Sistem Mimarı</span>
+                            <span class="lang-en">Founder & Lead Systems Architect</span>
+                        </div>
+                        <div class="timeline-company">Vellium &bull; vellium.dev &bull; İstanbul, TR</div>
+                    </div>
+                    <div class="timeline-date">2024 – Günümüz / Present</div>
+                </div>
+                <div class="timeline-body">
+                    <ul class="lang-tr">
+                        <li>Yeni nesil masaüstü verimlilik araçları, sistem yardımcıları ve sağlık bilişimi yazılımlarının ürün mimarisi, teknoloji seçimi ve mühendislik yönetimi yürütülmektedir.</li>
+                        <li>Yerel öncelikli (local-first) veri mimarileri, modern çapraz platform masaüstü teknolojileri ve yüksek güvenilirlikli sistem tasarımları geliştirilmektedir.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Directs product roadmap, systems architecture, and engineering for next-generation desktop productivity tools and healthcare software initiatives.</li>
+                        <li>Architects high-performance, local-first applications and cross-platform utilities focused on reliability, security, and intuitive user experiences.</li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Medipro -->
             <div class="timeline-item">
@@ -404,10 +481,10 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla medikal cihazın</strong> uçtan uca entegrasyonunu gerçekleştirdim (HBYS/HIS, PACS, VNA).</li>
-                        <li>Hasta başı monitörler, merkezi izleme sistemleri ve tanı cihazlarını (ECG, EEG, EMG, AED, Defibrilatör) hastane platformlarına entegre ettim.</li>
-                        <li>Cihazların yerleşik entegrasyonlarının yetersiz olduğu durumlarda veri dönüşümü ve yönlendirmesi için mikroservis tabanlı ara katman çözümleri geliştirdim.</li>
-                        <li>Klinik sistemler için güvenli hastane ağ altyapısı (firewall, VPN, güvenli iletişim kanalları) yapılandırdım ve veri yedekleme süreçlerini yönettim.</li>
+                        <li>Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla medikal cihazın</strong> uçtan uca entegrasyonu koordine edildi (HBYS/HIS, PACS, VNA).</li>
+                        <li>Hasta başı monitörler, merkezi izleme sistemleri ve tanı cihazlarının (ECG, EEG, EMG, AED, Defibrilatör) hastane platformlarına entegrasyonu sağlandı.</li>
+                        <li>Yerleşik entegrasyonların bulunmadığı senaryolarda veri dönüşümü ve yönlendirmesi için mikroservis tabanlı ara katman çözümleri geliştirildi.</li>
+                        <li>Klinik sistemler için kurumsal ağ altyapısı (güvenlik duvarı, VPN, güvenli iletişim kanalları) yapılandırıldı ve yedekleme süreçleri yürütüldü.</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Delivered end-to-end integration of <strong>1000+ medical devices across 100+ hospitals</strong> in Türkiye, connecting clinical systems with HIS, PACS, and VNA.</li>
@@ -432,8 +509,8 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>C# ve ASP.NET Core MVC kullanarak modüler uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanları geliştirdim.</li>
-                        <li>Entity Framework Core, rol tabanlı yetkilendirme ve Clean Code / SOLID prensipleri ile kurumsal yazılım mimarisine katkı sağladım.</li>
+                        <li>C# ve ASP.NET Core MVC ile modüler klinik uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanı mimarisi geliştirildi.</li>
+                        <li>Entity Framework Core, rol tabanlı yetkilendirme ve Clean Code / SOLID prensipleriyle kurumsal standartlarda kodlama yapıldı.</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Developed modular application components using C# and ASP.NET Core MVC, designing relational databases via SQL Server and EF Core.</li>
@@ -456,7 +533,7 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>Donanım/yazılım bakım işlemleri, ağ altyapısının kurulumu, sunucu operasyonları ve son kullanıcı destek süreçlerinde görev aldım.</li>
+                        <li>Kurumsal ağ altyapısı, sunucu operasyonları, donanım/yazılım yapılandırması ve kullanıcı teknik destek süreçleri koordine edilmiştir.</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Supported institutional IT operations, hardware/software maintenance, network configuration, and help desk troubleshooting.</li>
@@ -478,7 +555,7 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>Horseshoe Adası jeokronolojik araştırma projesinde veri analizi, filtreleme ve görselleştirme süreçlerinde yer aldım.</li>
+                        <li>TÜBİTAK destekli kutup araştırmaları projesinde jeokronolojik veri dizilerinin ileri seviye matematiksel analizi ve bilimsel veri görselleştirme süreçleri yürütülmüştür.</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Assisted in geochronological data processing, visual evaluation of dating datasets, and scientific reporting in a TUBITAK-funded research project.</li>

@@ -108,19 +108,19 @@ function setLanguage(lang) {
     const placeholders = {
         tr: {
             name: "Ad Soyad",
-            email: "E-posta Adresi",
+            email: "Kurumsal E-posta Adresi",
             phone: "Telefon Numarası",
-            subject: "E-posta Konusu",
-            message: "Mesajınız",
-            search: "Proje veya teknoloji ara..."
+            subject: "İletişim / Proje Konusu",
+            message: "Proje kapsamı veya detaylı mesajınız...",
+            search: "Proje, teknoloji veya yetkinlik ara..."
         },
         en: {
             name: "Full Name",
-            email: "Email Address",
-            phone: "Mobile Number",
-            subject: "Email Subject",
-            message: "Your Message",
-            search: "Search projects or tech..."
+            email: "Work Email Address",
+            phone: "Phone Number",
+            subject: "Subject / Project Inquiry",
+            message: "Project scope or inquiry details...",
+            search: "Search projects, technologies, or keywords..."
         }
     };
 
@@ -318,14 +318,14 @@ function showCustomAlert(type, message) {
         alertBox.classList.remove('error-box');
         if (successIcon) successIcon.style.display = 'inline-block';
         if (errorIcon) errorIcon.style.display = 'none';
-        if (trTitle) trTitle.textContent = 'Başarılı!';
-        if (enTitle) enTitle.textContent = 'Success!';
+        if (trTitle) trTitle.textContent = 'Talebiniz Alındı';
+        if (enTitle) enTitle.textContent = 'Inquiry Received';
     } else {
         alertBox.classList.add('error-box');
         if (successIcon) successIcon.style.display = 'none';
         if (errorIcon) errorIcon.style.display = 'inline-block';
-        if (trTitle) trTitle.textContent = 'Hata!';
-        if (enTitle) enTitle.textContent = 'Error!';
+        if (trTitle) trTitle.textContent = 'İşlem Başarısız';
+        if (enTitle) enTitle.textContent = 'Action Failed';
     }
 
     alertOverlay.classList.add('show');
@@ -368,27 +368,27 @@ if (fileInput && fileUploadInfo && fileNameSpan) {
             
             if (file.size > maxSizeBytes) {
                 const sizeErrorMessages = {
-                    tr: "Seçtiğiniz dosya çok büyük. Maksimum dosya boyutu 10 MB olmalıdır.",
-                    en: "The selected file is too large. Maximum file size is 10 MB."
+                    tr: "Yüklenmeye çalışılan dosya sınırı aşıyor. Maksimum dosya boyutu 10 MB'dır.",
+                    en: "The selected document exceeds the limit. Maximum allowed size is 10 MB."
                 };
                 const currentLang = document.documentElement.getAttribute('lang') || 'tr';
                 showCustomAlert('error', sizeErrorMessages[currentLang]);
                 
                 fileInput.value = '';
                 fileUploadInfo.style.display = 'none';
-                if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosya Ekle (İsteğe Bağlı)';
-                if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach File (Optional)';
+                if (fileLabelTextTr) fileLabelTextTr.textContent = 'Belge / Dosya Ekle (İsteğe Bağlı)';
+                if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach Document (Optional)';
                 return;
             }
 
             fileNameSpan.textContent = file.name + ` (${(file.size / (1024 * 1024)).toFixed(2)} MB)`;
             fileUploadInfo.style.display = 'flex';
             if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosyayı Değiştir';
-            if (fileLabelTextEn) fileLabelTextEn.textContent = 'Change File';
+            if (fileLabelTextEn) fileLabelTextEn.textContent = 'Change Document';
         } else {
             fileUploadInfo.style.display = 'none';
-            if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosya Ekle (İsteğe Bağlı)';
-            if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach File (Optional)';
+            if (fileLabelTextTr) fileLabelTextTr.textContent = 'Belge / Dosya Ekle (İsteğe Bağlı)';
+            if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach Document (Optional)';
         }
     });
 }
@@ -397,8 +397,8 @@ if (removeFileBtn && fileInput && fileUploadInfo) {
     removeFileBtn.addEventListener('click', () => {
         fileInput.value = '';
         fileUploadInfo.style.display = 'none';
-        if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosya Ekle (İsteğe Bağlı)';
-        if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach File (Optional)';
+        if (fileLabelTextTr) fileLabelTextTr.textContent = 'Belge / Dosya Ekle (İsteğe Bağlı)';
+        if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach Document (Optional)';
     });
 }
 
@@ -427,25 +427,25 @@ if (contactForm) {
         }).then(response => {
             if (response.ok) {
                 const messages = {
-                    tr: "Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğim.",
-                    en: "Your message has been sent successfully! I will get back to you as soon as possible."
+                    tr: "Kurumsal iletişim talebiniz başarıyla iletilmiştir. En kısa sürede geri dönüş sağlanacaktır.",
+                    en: "Your enterprise inquiry has been successfully transmitted. We will get back to you shortly."
                 };
                 showCustomAlert('success', messages[currentLang]);
                 contactForm.reset();
                 if (fileUploadInfo) fileUploadInfo.style.display = 'none';
-                if (fileLabelTextTr) fileLabelTextTr.textContent = 'Dosya Ekle (İsteğe Bağlı)';
-                if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach File (Optional)';
+                if (fileLabelTextTr) fileLabelTextTr.textContent = 'Belge / Dosya Ekle (İsteğe Bağlı)';
+                if (fileLabelTextEn) fileLabelTextEn.textContent = 'Attach Document (Optional)';
             } else {
                 const errorMessages = {
-                    tr: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-                    en: "An error occurred while sending your message. Please try again."
+                    tr: "Talep iletilirken teknik bir hata meydana geldi. Lütfen doğrudan e-posta ile iletişime geçiniz.",
+                    en: "A technical error occurred while submitting your inquiry. Please reach out directly via email."
                 };
                 showCustomAlert('error', errorMessages[currentLang]);
             }
         }).catch(() => {
             const errorMessages = {
-                tr: "Bağlantı hatası oluştu. Lütfen internet bağlantınızı kontrol edin.",
-                en: "A connection error occurred. Please check your internet connection."
+                tr: "Bağlantı hatası oluştu. Lütfen internet bağlantınızı kontrol ediniz.",
+                en: "A connection error occurred. Please check your network connection."
             };
             showCustomAlert('error', errorMessages[currentLang]);
         }).finally(() => {
