@@ -108,19 +108,19 @@ function setLanguage(lang) {
     const placeholders = {
         tr: {
             name: "Ad Soyad",
-            email: "Kurumsal E-posta Adresi",
+            email: "E-posta Adresi",
             phone: "Telefon Numarası",
-            subject: "İletişim / Proje Konusu",
-            message: "Proje kapsamı veya detaylı mesajınız...",
-            search: "Proje, teknoloji veya yetkinlik ara..."
+            subject: "Konu",
+            message: "Mesajınız...",
+            search: "Proje veya teknoloji ara..."
         },
         en: {
             name: "Full Name",
-            email: "Work Email Address",
+            email: "Email Address",
             phone: "Phone Number",
-            subject: "Subject / Project Inquiry",
-            message: "Project scope or inquiry details...",
-            search: "Search projects, technologies, or keywords..."
+            subject: "Subject",
+            message: "Your message...",
+            search: "Search projects or technologies..."
         }
     };
 
