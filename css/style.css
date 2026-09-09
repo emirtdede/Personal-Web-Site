@@ -423,9 +423,10 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
 .home-sci {
     position: absolute;
     bottom: 4rem;
-    width: 170px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+    width: max-content;
     z-index: 99;
 }
 
@@ -434,20 +435,25 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem solid var(--main-color);
+    width: 4.4rem;
+    height: 4.4rem;
+    background: rgba(45, 32, 32, 0.5);
+    border: 1.5px solid rgba(204, 149, 149, 0.4);
     border-radius: 50%;
-    font-size:  20px;
+    font-size: 2.2rem;
     color: var(--main-color);
     z-index: 1;
     overflow: hidden;
-    transition: .5s;
+    transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .home-sci a:hover {
     color: var(--bg-color);
+    border-color: var(--main-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(204, 149, 149, 0.38);
 }
 
 .home-sci a::before {
@@ -459,7 +465,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     height: 100%;
     background: var(--main-color);
     z-index: -1;
-    transition: .5s;
+    transition: .35s ease;
 }
  
 .home-sci a:hover::before {
@@ -1228,12 +1234,14 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     }
 
     .home-sci {
-        width: 160px;
+        width: max-content;
+        gap: 1.2rem;
     }
 
     .home-sci a {
-        width: 38px;
-        height: 38px;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
     }
 }
 
