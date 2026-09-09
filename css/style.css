@@ -288,15 +288,15 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 30rem; /* Default TR */
+    width: 34rem; /* Full Stack Developer */
 }
 
 html[lang="tr"] .home-content .text-animate {
-    width: 30rem;
+    width: 34rem;
 }
 
 html[lang="en"] .home-content .text-animate {
-    width: 35rem;
+    width: 34rem;
 }
 
 .home-content .text-animate h3 {
@@ -311,11 +311,11 @@ html[lang="en"] .home-content .text-animate {
 }
 
 html[lang="tr"] .home-content .text-animate h3 {
-    background-position: -30rem 0;
+    background-position: -34rem 0;
 }
 
 html[lang="en"] .home-content .text-animate h3 {
-    background-position: -35rem 0;
+    background-position: -34rem 0;
 }
 
 html[lang="tr"] .home.show-animate .home-content .text-animate h3 {
@@ -1173,7 +1173,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     0%,
     10%,
     100% {
-        background-position: -30rem 0;
+        background-position: -34rem 0;
     }
     65%,
     85% {
@@ -1185,7 +1185,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     0%,
     10%,
     100% {
-        background-position: -35rem 0;
+        background-position: -34rem 0;
     }
     65%,
     85% {
