@@ -248,7 +248,25 @@
             color: var(--main-color);
         }
 
-        /* Badge List */
+        /* Badge List & Skill Groups */
+        .skills-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .skills-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-group-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
         .badge-list {
             display: flex;
             flex-wrap: wrap;
@@ -310,6 +328,10 @@
             .cv-section h3 {
                 color: #222222 !important;
                 border-bottom: 1px solid #cccccc !important;
+            }
+
+            .skills-group-title {
+                color: #222222 !important;
             }
 
             .timeline-item {
@@ -393,10 +415,10 @@
                 <span class="lang-en">Executive Summary</span>
             </h3>
             <p class="lang-tr">
-                Yenilikçi dijital ürünler, masaüstü verimlilik araçları ve dağıtık web sistemleri geliştiren <strong>Vellium</strong>'un kurucusu; modern web teknolojileri (Next.js 15, React 19, TypeScript), sistem ve masaüstü mühendisliği (Rust, Tauri v2) ile kurumsal BT altyapıları ve veritabanı mimarilerinde derin uzmanlığa sahip Full Stack Developer ve BT Uzmanı. Gerçek zamanlı veri akışları (WebRTC Mesh, WebAssembly, OpenCV.js), uçtan uca kriptografik güvenlik (AES-256-GCM) ve yüksek güvenlikli kurumsal sistem entegrasyonlarında kanıtlanmış teslimat geçmişine sahiptir. Geçmiş kurumsal iş deneyiminde Türkiye genelinde 100’den fazla hastanede 1000’den fazla kritik cihazın ve ara katman yazılımlarının (HL7, DICOM, PACS, HBYS) entegrasyon süreçlerini başarıyla yönetmiştir.
+                Yenilikçi dijital ürünler, masaüstü verimlilik araçları ve dağıtık web platformları geliştiren <strong>Vellium</strong>'un kurucusu; modern web teknolojileri (Next.js 15, React 19, TypeScript), sistem ve masaüstü mühendisliği (Rust, Tauri v2) ile kurumsal BT altyapıları ve veritabanı mimarilerinde derin uzmanlığa sahip Full Stack Developer ve BT Uzmanı. Gerçek zamanlı sistemler (WebRTC Mesh, WebAssembly, OpenCV.js), uçtan uca doğrulanmış kriptografi (AES-256-GCM) ve görev kritik kurumsal sistem entegrasyonlarında kanıtlanmış teslimat geçmişine sahiptir. Geçmiş kurumsal deneyiminde Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla kritik cihazın</strong> ve ara katman yazılımlarının (HL7, DICOM, PACS, HBYS) %99.9 çalışma süresi (uptime) ve sıfır veri kaybı ile entegrasyonunu başarıyla koordine etmiştir. Girişimci kurucu çevikliğini ve uçtan uca sahiplenme (extreme ownership) disiplinini, kurumsal organizasyonlarda yüksek katma değer üreten stratejik mühendislik rollerine aktarmayı hedeflemektedir.
             </p>
             <p class="lang-en">
-                Founder of <strong>Vellium</strong>, architecting next-generation digital productivity tools, desktop software, and distributed web platforms; Full Stack Developer and IT Specialist with deep expertise in modern web engineering (Next.js 15, React 19, TypeScript), systems/desktop software (Rust, Tauri v2), and enterprise IT infrastructure. Proven track record in realtime systems (WebRTC Mesh, WebAssembly, OpenCV.js), authenticated cryptography (AES-256-GCM), and mission-critical reliability. Delivers extensive enterprise systems background from coordinating end-to-end integration of 1,000+ devices and middleware across 100+ hospitals in Türkiye (HL7, DICOM, PACS, HIS).
+                Founder of <strong>Vellium</strong>, architecting next-generation digital productivity tools, desktop systems software, and distributed web platforms; Full Stack Developer and IT Specialist with deep expertise in modern web engineering (Next.js 15, React 19, TypeScript), systems software (Rust, Tauri v2), and enterprise IT infrastructure. Proven track record in realtime systems (WebRTC Mesh, WebAssembly, OpenCV.js), authenticated cryptography (AES-256-GCM), and mission-critical reliability. Delivers extensive enterprise background from coordinating the end-to-end integration of <strong>1,000+ devices across 100+ hospitals</strong> in Türkiye with 99.9% uptime and zero data loss (HL7, DICOM, PACS, HIS). Leverages an entrepreneurial extreme-ownership mindset to drive high-impact software engineering and systems architecture initiatives within enterprise teams.
             </p>
         </section>
 
@@ -413,8 +435,8 @@
                     <span class="lang-en"><strong>Date of Birth:</strong> 14 July 2001 (Age: 24)</span>
                 </div>
                 <div class="info-item">
-                    <span class="lang-tr"><strong>Diller:</strong> Türkçe (Ana dil), İngilizce (B2)</span>
-                    <span class="lang-en"><strong>Languages:</strong> Turkish (Native), English (B2)</span>
+                    <span class="lang-tr"><strong>Diller:</strong> Türkçe (Ana dil), İngilizce (Profesyonel Yetkinlik / B2+)</span>
+                    <span class="lang-en"><strong>Languages:</strong> Turkish (Native), English (Professional Working Proficiency / B2+)</span>
                 </div>
                 <div class="info-item">
                     <span class="lang-tr"><strong>Askerlik Durumu:</strong> Tecilli (2027)</span>
@@ -425,12 +447,12 @@
                     <span class="lang-en"><strong>Driving License:</strong> Category B (Active)</span>
                 </div>
                 <div class="info-item">
-                    <span class="lang-tr"><strong>Müsaitlik:</strong> Yeni Proje ve İş Birliklerine Açık</span>
-                    <span class="lang-en"><strong>Availability:</strong> Open to New Projects & Collaborations</span>
+                    <span class="lang-tr"><strong>Müsaitlik:</strong> Stratejik Mühendislik Rolleri & Proje İş Birliklerine Açık</span>
+                    <span class="lang-en"><strong>Availability:</strong> Open to Strategic Engineering Roles & High-Impact Collaborations</span>
                 </div>
                 <div class="info-item">
-                    <span class="lang-tr"><strong>Çalışma Modeli:</strong> Tam Zamanlı, Hibrit veya Uzaktan</span>
-                    <span class="lang-en"><strong>Work Mode:</strong> Full-Time, Hybrid, or Remote</span>
+                    <span class="lang-tr"><strong>Çalışma Modeli:</strong> Tam Zamanlı (Kurumsal) / Hibrit / Uzaktan</span>
+                    <span class="lang-en"><strong>Work Mode:</strong> Full-Time (Enterprise) / Hybrid / Remote</span>
                 </div>
             </div>
         </section>
@@ -448,8 +470,8 @@
                 <div class="timeline-header">
                     <div>
                         <div class="timeline-title">
-                            <span class="lang-tr">Kurucu &amp; Full Stack Developer</span>
-                            <span class="lang-en">Founder &amp; Full Stack Engineer</span>
+                            <span class="lang-tr">Kurucu &amp; Baş Yazılım Mimarı</span>
+                            <span class="lang-en">Founder &amp; Lead Systems Architect</span>
                         </div>
                         <div class="timeline-company">Vellium &bull; vellium.dev &bull; İstanbul, TR</div>
                     </div>
@@ -457,12 +479,14 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>İnsanların teknolojiyle daha doğal, verimli ve sürdürülebilir bir şekilde etkileşime geçmesini sağlayan yeni nesil araçların (Tauri v2, Rust, React 19, Next.js 15, WebRTC) geliştirilmesi ve teknik kuruculuğu.</li>
-                        <li>Yerel öncelikli (local-first) veri mimarileri, askeri düzeyde şifreleme (AES-256-GCM) ve Discord seviyesinde gerçek zamanlı iletişim sistemleri geliştirilmektedir.</li>
+                        <li>Yeni nesil masaüstü verimlilik araçları, sistem yardımcıları ve gerçek zamanlı platformların (Tauri v2, Rust, React 19, Next.js 15, WebRTC) ürün vizyonu, sistem mimarisi ve teknik liderliği yürütülmektedir.</li>
+                        <li><strong>ENV-Vault</strong> (AES-256-GCM ile sıfır bellek sızıntılı ve <10ms şifre çözme süreli kasa), <strong>Node-Cleaner</strong> (Rust paralel motoruyla disk temizliğini %90 hızlandıran, 73 dil destekli araç) ve <strong>Özlem</strong> (WebRTC Mesh ile <50ms gecikmeli uçtan uca şifreli ses platformu) sıfırdan geliştirilip canlıya alınmıştır.</li>
+                        <li>Girişimci sahiplenme disiplinini kurumsal takımlarla sinerjiye dönüştürmeye, tam zamanlı mühendislik liderliğine ve yüksek etki yaratan kurumsal projelere odaklanmaktadır.</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Directs product roadmap, systems engineering, and architecture for modern productivity software (Tauri v2, Rust, React 19, Next.js 15, WebRTC).</li>
-                        <li>Architects high-performance local-first applications, authenticated encryption vaults (AES-256-GCM), and Discord-grade realtime communication platforms.</li>
+                        <li>Shipped production-grade software including <strong>ENV-Vault</strong> (AES-256-GCM encrypted vault with <10ms decrypt & zero memory leaks), <strong>Node-Cleaner</strong> (multi-threaded Rust core accelerating disk cleanup by 90%), and <strong>Ozlem</strong> (E2EE WebRTC Mesh voice/chat platform with <50ms ultra-low latency).</li>
+                        <li>Combines entrepreneurial extreme ownership with technical rigor, dedicated to driving high-impact systems engineering initiatives in full-time corporate environments.</li>
                     </ul>
                 </div>
             </div>
@@ -481,16 +505,16 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla medikal cihazın</strong> uçtan uca entegrasyonu koordine edildi (HBYS/HIS, PACS, VNA).</li>
-                        <li>Hasta başı monitörler, merkezi izleme sistemleri ve tanı cihazlarının (ECG, EEG, EMG, AED, Defibrilatör) hastane platformlarına entegrasyonu sağlandı.</li>
-                        <li>Yerleşik entegrasyonların bulunmadığı senaryolarda veri dönüşümü ve yönlendirmesi için mikroservis tabanlı ara katman çözümleri geliştirildi.</li>
-                        <li>Klinik sistemler için kurumsal ağ altyapısı (güvenlik duvarı, VPN, güvenli iletişim kanalları) yapılandırıldı ve yedekleme süreçleri yürütüldü.</li>
+                        <li>Türkiye genelinde <strong>100’den fazla hastanede 1000’den fazla kritik medikal cihazın</strong> uçtan uca entegrasyonu koordine edildi (HBYS/HIS, PACS, VNA).</li>
+                        <li>Hasta başı monitörler, merkezi izleme üniteleri ve tanı cihazlarının (ECG, EEG, EMG, AED, Defibrilatör) hastane bilgi platformlarına entegrasyonu sağlandı.</li>
+                        <li>Özel protokol dönüşümleri için <strong>%99.9 çalışma süresi (uptime) ve sıfır veri kaybı</strong> garantili mikroservis tabanlı ara katman (middleware) çözümleri geliştirildi ve devreye alındı.</li>
+                        <li>Klinik sistemler için kurumsal ağ altyapısı (güvenlik duvarı, VPN, güvenli iletişim kanalları), VMware/Hyper-V sanallaştırma ve operasyonel stabilizasyon süreçleri yönetildi.</li>
                     </ul>
                     <ul class="lang-en">
-                        <li>Delivered end-to-end integration of <strong>1000+ medical devices across 100+ hospitals</strong> in Türkiye, connecting clinical systems with HIS, PACS, and VNA.</li>
+                        <li>Delivered end-to-end integration of <strong>1,000+ medical devices across 100+ hospitals</strong> in Türkiye, connecting clinical systems with HIS, PACS, and VNA platforms.</li>
                         <li>Integrated bedside monitors, central monitoring units, and diagnostic devices (ECG, EEG, EMG, AED, Defibrillators) with core hospital platforms.</li>
-                        <li>Developed microservice-based middleware solutions for data transformation and routing when native integrations were unavailable.</li>
-                        <li>Configured hospital network security (firewalls, VPNs) and managed system backup, archive, and operational stabilization workflows.</li>
+                        <li>Engineered microservice-based middleware solutions guaranteeing <strong>99.9% uptime and zero data loss</strong> for complex proprietary protocol transformations.</li>
+                        <li>Configured hospital network security (firewalls, VPNs), VMware/Hyper-V virtualization, and disaster recovery workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -500,8 +524,8 @@
                 <div class="timeline-header">
                     <div>
                         <div class="timeline-title">
-                            <span class="lang-tr">Yazılım ve Sistem Stajyeri</span>
-                            <span class="lang-en">Software & Systems Intern</span>
+                            <span class="lang-tr">Yazılım ve Sistem Stajyeri (Zorunlu Yaz Stajı)</span>
+                            <span class="lang-en">Software & Systems Intern (Academic Summer Internship)</span>
                         </div>
                         <div class="timeline-company">TRtek MEDICAL SOFTWARE &bull; Kocaeli, TR</div>
                     </div>
@@ -509,11 +533,11 @@
                 </div>
                 <div class="timeline-body">
                     <ul class="lang-tr">
-                        <li>C# ve ASP.NET Core MVC ile modüler klinik uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanı mimarisi geliştirildi.</li>
+                        <li>Mühendislik lisans eğitimi zorunlu staj programı kapsamında; C# ve ASP.NET Core MVC ile modüler klinik uygulama bileşenleri ve SQL Server üzerinde ilişkisel veritabanı mimarisi geliştirildi.</li>
                         <li>Entity Framework Core, rol tabanlı yetkilendirme ve Clean Code / SOLID prensipleriyle kurumsal standartlarda kodlama yapıldı.</li>
                     </ul>
                     <ul class="lang-en">
-                        <li>Developed modular application components using C# and ASP.NET Core MVC, designing relational databases via SQL Server and EF Core.</li>
+                        <li>Completed mandatory engineering degree summer internship: developed modular application components using C# and ASP.NET Core MVC, designing relational databases via SQL Server and EF Core.</li>
                         <li>Implemented authentication, user management, and followed Clean Code and SOLID principles in a medical software environment.</li>
                     </ul>
                 </div>
@@ -575,16 +599,16 @@
                 <div class="timeline-header">
                     <div>
                         <div class="timeline-title">
-                            <span class="lang-tr">Bilgisayar Mühendisliği Lisans</span>
-                            <span class="lang-en">Bachelor of Computer Engineering</span>
+                            <span class="lang-tr">Bilgisayar Mühendisliği Lisans Derecesi</span>
+                            <span class="lang-en">Bachelor of Science in Computer Engineering</span>
                         </div>
                         <div class="timeline-company">Osmaniye Korkut Ata Üniversitesi</div>
                     </div>
                     <div class="timeline-date">2021 – 2025</div>
                 </div>
                 <div class="timeline-body">
-                    <p class="lang-tr">GPA: <strong>2.91 / 4.00</strong> &bull; Yazılım mühendisliği, veri bilimi, yapay zekâ temelleri ve medikal bilişim sistemleri.</p>
-                    <p class="lang-en">GPA: <strong>2.91 / 4.00</strong> &bull; Core focus on software engineering, data structures, AI fundamentals, and healthcare IT.</p>
+                    <p class="lang-tr"><strong>Uzmanlık &amp; Odak:</strong> Dağıtık Sistem Mimarileri, Gerçek Zamanlı Veri Akışları (WebRTC/Wasm), Medikal Bilişim Entegrasyonu (HL7/DICOM) ve Kriptografik Sistem Güvenliği.</p>
+                    <p class="lang-en"><strong>Core Focus &amp; Capstone:</strong> Distributed Systems Architecture, Real-Time Data Streaming (WebRTC/Wasm), Healthcare IT Integration (HL7/DICOM), and Cryptographic Systems Security.</p>
                 </div>
             </div>
         </section>
@@ -596,24 +620,55 @@
                 <span class="lang-tr">Teknik Yetkinlikler</span>
                 <span class="lang-en">Core Competencies</span>
             </h3>
-            <div class="badge-list">
-                <span class="badge">Next.js 15</span>
-                <span class="badge">React 19</span>
-                <span class="badge">TypeScript</span>
-                <span class="badge">Rust</span>
-                <span class="badge">Tauri v2</span>
-                <span class="badge">WebRTC Mesh</span>
-                <span class="badge">WebAssembly &amp; OpenCV.js</span>
-                <span class="badge">Supabase &amp; PostgreSQL</span>
-                <span class="badge">Prisma ORM</span>
-                <span class="badge">Node.js</span>
-                <span class="badge">Python</span>
-                <span class="badge">C# / ASP.NET Core</span>
-                <span class="badge">SQL Server / Oracle SQL</span>
-                <span class="badge">Kurumsal BT &amp; Ağ Güvenliği</span>
-                <span class="badge">Sanallaştırma (VMware / Hyper-V)</span>
-                <span class="badge">Klinik Entegrasyon (HL7 &amp; DICOM)</span>
-                <span class="badge">Git / GitHub CI/CD</span>
+            
+            <div class="skills-group">
+                <div class="skills-group-title">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="lang-tr">Çekirdek Mimari & Full Stack</span>
+                    <span class="lang-en">Core Architecture & Full Stack</span>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">Next.js 15</span>
+                    <span class="badge">React 19</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Rust</span>
+                    <span class="badge">Tauri v2</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Supabase</span>
+                    <span class="badge">Prisma ORM</span>
+                    <span class="badge">Node.js</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">
+                    <i class='bx bx-shield-quarter'></i>
+                    <span class="lang-tr">Sistem Mühendisliği, Gerçek Zamanlı & Güvenlik</span>
+                    <span class="lang-en">Systems, Real-Time & Security</span>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">WebRTC Mesh</span>
+                    <span class="badge">WebAssembly &amp; OpenCV.js</span>
+                    <span class="badge">AES-256-GCM Şifreleme</span>
+                    <span class="badge">Dağıtık Sistem Mimarisi</span>
+                    <span class="badge">Python</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">
+                    <i class='bx bx-server'></i>
+                    <span class="lang-tr">Kurumsal BT, Altyapı & Entegrasyon</span>
+                    <span class="lang-en">Enterprise IT, Systems & Middleware</span>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">Klinik Entegrasyon (HL7 &amp; DICOM / PACS)</span>
+                    <span class="badge">Kurumsal BT &amp; Ağ Güvenliği (Firewall / VPN)</span>
+                    <span class="badge">Sanallaştırma (VMware / Hyper-V)</span>
+                    <span class="badge">C# / ASP.NET Core</span>
+                    <span class="badge">SQL Server</span>
+                    <span class="badge">Git / GitHub CI/CD</span>
+                </div>
             </div>
         </section>
     </main>
