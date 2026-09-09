@@ -273,15 +273,15 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 32rem; /* Founder @ Vellium */
+    width: 29.5rem; /* Vellium Kurucusu */
 }
 
 html[lang="tr"] .home-content .text-animate {
-    width: 32rem;
+    width: 29.5rem;
 }
 
 html[lang="en"] .home-content .text-animate {
-    width: 32rem;
+    width: 28rem;
 }
 
 .home-content .text-animate h3 {
@@ -296,11 +296,11 @@ html[lang="en"] .home-content .text-animate {
 }
 
 html[lang="tr"] .home-content .text-animate h3 {
-    background-position: -32rem 0;
+    background-position: -29.5rem 0;
 }
 
 html[lang="en"] .home-content .text-animate h3 {
-    background-position: -32rem 0;
+    background-position: -28rem 0;
 }
 
 html[lang="tr"] .home.show-animate .home-content .text-animate h3 {
@@ -1295,7 +1295,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     0%,
     10%,
     100% {
-        background-position: -32rem 0;
+        background-position: -29.5rem 0;
     }
     65%,
     85% {
@@ -1307,7 +1307,7 @@ html[lang="en"] .home.show-animate .home-content .text-animate h3 {
     0%,
     10%,
     100% {
-        background-position: -32rem 0;
+        background-position: -28rem 0;
     }
     65%,
     85% {
